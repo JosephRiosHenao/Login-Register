@@ -5,6 +5,8 @@
  */
 package Formularios;
 
+import java.awt.geom.Point2D;
+
 /**
  *
  * @author RiosHenao
@@ -14,6 +16,7 @@ public class EnterSelection extends javax.swing.JFrame {
     /**
      * Creates new form EnterSelection
      */
+    boolean Iniciado;
     public EnterSelection() {
         initComponents();
         this.setLocationRelativeTo(null);
@@ -37,14 +40,13 @@ public class EnterSelection extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(400, 500));
 
         jPanel1.setMaximumSize(new java.awt.Dimension(400, 500));
         jPanel1.setMinimumSize(new java.awt.Dimension(400, 500));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("¿Olvidastes tu cuenta?");
+        jLabel1.setText("Forgot your account?");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 470, -1, -1));
 
         LoginButton.setBackground(new java.awt.Color(113, 177, 128));
@@ -53,6 +55,11 @@ public class EnterSelection extends javax.swing.JFrame {
         LoginButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LoginButton.setText("LOGIN");
         LoginButton.setOpaque(true);
+        LoginButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LoginButtonMouseClicked(evt);
+            }
+        });
         jPanel1.add(LoginButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 230, 190, -1));
 
         RegisterButton.setBackground(new java.awt.Color(113, 177, 128));
@@ -61,6 +68,11 @@ public class EnterSelection extends javax.swing.JFrame {
         RegisterButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         RegisterButton.setText("REGISTER");
         RegisterButton.setOpaque(true);
+        RegisterButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                RegisterButtonMouseClicked(evt);
+            }
+        });
         jPanel1.add(RegisterButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 290, 190, -1));
 
         ExitButton.setFont(new java.awt.Font("Dubai Light", 1, 36)); // NOI18N
@@ -118,7 +130,44 @@ public class EnterSelection extends javax.swing.JFrame {
         xx = evt.getX();
         xy = evt.getY();
     }//GEN-LAST:event_BackgroundMousePressed
+    private int xOnScreen;
+    private int yOnScreen;
+    private void LoginButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginButtonMouseClicked
+        // TODO add your handling code here:
 
+    }//GEN-LAST:event_LoginButtonMouseClicked
+
+    private void RegisterButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegisterButtonMouseClicked
+        // TODO add your handling code here:
+        int x = this.getLocationOnScreen().x;
+        int y = this.getLocationOnScreen().y;
+        
+        Formularios.RegisterForm Register = new Formularios.RegisterForm();
+        setXOnScreen(x);
+        setYOnScreen(y);
+        Register.setLocationRelativeToSelector(getXOnScreen(), getYOnScreen());
+        Register.setVisible(true);
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_RegisterButtonMouseClicked
+    
+    public void setXOnScreen(int xOnScreen){
+        this.xOnScreen = xOnScreen;
+        System.out.println(xOnScreen+"  "+yOnScreen);
+    } 
+    
+    public void setYOnScreen(int yOnScreen){
+        this.yOnScreen = yOnScreen;
+        System.out.println(xOnScreen+"  "+yOnScreen);
+    }
+    
+    public int getXOnScreen(){
+        return xOnScreen;
+    }
+    
+    public int getYOnScreen(){
+        return yOnScreen;
+    }
     /**
      * @param args the command line arguments
      */
