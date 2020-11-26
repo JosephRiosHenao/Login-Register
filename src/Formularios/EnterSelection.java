@@ -134,7 +134,15 @@ public class EnterSelection extends javax.swing.JFrame {
     private int yOnScreen;
     private void LoginButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginButtonMouseClicked
         // TODO add your handling code here:
-
+        int x = this.getLocationOnScreen().x;
+        int y = this.getLocationOnScreen().y;
+        
+        Formularios.LoginForm Login = new Formularios.LoginForm();
+        setXOnScreen(x);
+        setYOnScreen(y);
+        Login.setLocationRelativeToSelector(getXOnScreen(), getYOnScreen());
+        Login.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_LoginButtonMouseClicked
 
     private void RegisterButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegisterButtonMouseClicked
