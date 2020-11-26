@@ -32,6 +32,7 @@ public class RegisterForm extends javax.swing.JFrame {
         Pasword2Text = new javax.swing.JPasswordField();
         UsernameText = new javax.swing.JTextField();
         EmailText = new javax.swing.JTextField();
+        ReturnButton = new javax.swing.JLabel();
         RegisterButton = new javax.swing.JLabel();
         ExitButton = new javax.swing.JLabel();
         Background = new javax.swing.JLabel();
@@ -94,6 +95,17 @@ public class RegisterForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(EmailText, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 280, 280, 40));
+
+        ReturnButton.setFont(new java.awt.Font("Dubai Light", 1, 36)); // NOI18N
+        ReturnButton.setForeground(new java.awt.Color(255, 255, 255));
+        ReturnButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ReturnButton.setText("X");
+        ReturnButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ReturnButtonMouseClicked(evt);
+            }
+        });
+        jPanel1.add(ReturnButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, 30));
 
         RegisterButton.setBackground(new java.awt.Color(113, 177, 128));
         RegisterButton.setFont(new java.awt.Font("Dubai Light", 0, 24)); // NOI18N
@@ -174,20 +186,39 @@ public class RegisterForm extends javax.swing.JFrame {
     private void Pasword2TextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pasword2TextActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Pasword2TextActionPerformed
+
+    private void ReturnButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ReturnButtonMouseClicked
+        // TODO add your handling code here:
+        int x = this.getLocationOnScreen().x;
+        int y = this.getLocationOnScreen().y;
+        setXOnScreen(x);
+        setYOnScreen(y);
+        Formularios.EnterSelection Selection = new Formularios.EnterSelection();
+        Selection.setLocationRelativeToRegisterLogin(getXOnScreen(), getYOnScreen());
+        Selection.setVisible(true);
+        this.setVisible(false);
+
+    }//GEN-LAST:event_ReturnButtonMouseClicked
+    int xOnScreen, yOnScreen;
+    public void setXOnScreen(int xOnScreen){
+        this.xOnScreen = xOnScreen;
+        System.out.println(xOnScreen+"  "+yOnScreen);
+    } 
+    
+    public void setYOnScreen(int yOnScreen){
+        this.yOnScreen = yOnScreen;
+        System.out.println(xOnScreen+"  "+yOnScreen);
+    }
+    
+    public int getXOnScreen(){
+        return xOnScreen;
+    }
+    
+    public int getYOnScreen(){
+        return yOnScreen;
+    }
     public void setLocationRelativeToSelector(int x, int y){
         Formularios.EnterSelection MenuSelection = new Formularios.EnterSelection();
-        //this.setBounds(MenuSelection.xOnScreen, MenuSelection.yOnScreen, 400, 500);
-        /*boolean PocisionConfirmada = true;
-        while (PocisionConfirmada) {
-            int x = MenuSelection.getXOnScreen();
-            int y = MenuSelection.getYOnScreen();
-            if (x != 0 || y != 0){
-                PocisionConfirmada = false;
-            }
-            System.out.println(x+"   "+y);
-            this.setBounds(x,y,400,500);
-        }
-        */
         System.out.println(x+"   "+y);
         this.setBounds(x,y,400,500);
     }
@@ -233,6 +264,7 @@ public class RegisterForm extends javax.swing.JFrame {
     private javax.swing.JPasswordField Pasword1Text;
     private javax.swing.JPasswordField Pasword2Text;
     private javax.swing.JLabel RegisterButton;
+    private javax.swing.JLabel ReturnButton;
     private javax.swing.JTextField UsernameText;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

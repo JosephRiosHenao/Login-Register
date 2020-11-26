@@ -151,6 +151,9 @@ public class EnterSelection extends javax.swing.JFrame {
         
     }//GEN-LAST:event_RegisterButtonMouseClicked
     
+    public void setLocationRelativeToRegisterLogin(int x, int y){
+        this.setBounds(x,y,400,500);
+    }
     public void setXOnScreen(int xOnScreen){
         this.xOnScreen = xOnScreen;
         System.out.println(xOnScreen+"  "+yOnScreen);
