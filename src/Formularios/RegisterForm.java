@@ -43,53 +43,57 @@ public class RegisterForm extends javax.swing.JFrame {
         jPanel1.setMaximumSize(new java.awt.Dimension(400, 500));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Pasword1Text.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Pasword1Text.setBackground(new java.awt.Color(255, 255, 255));
+        Pasword1Text.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Pasword1Text.setForeground(new java.awt.Color(20, 77, 95));
         Pasword1Text.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        Pasword1Text.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        Pasword1Text.setBorder(null);
         Pasword1Text.setCaretColor(new java.awt.Color(20, 77, 95));
-        Pasword1Text.setOpaque(false);
         Pasword1Text.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Pasword1TextActionPerformed(evt);
             }
         });
-        jPanel1.add(Pasword1Text, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 330, 230, 40));
+        jPanel1.add(Pasword1Text, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 330, 280, 40));
 
-        Pasword2Text.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Pasword2Text.setBackground(new java.awt.Color(255, 255, 255));
+        Pasword2Text.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Pasword2Text.setForeground(new java.awt.Color(20, 77, 95));
         Pasword2Text.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        Pasword2Text.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        Pasword2Text.setBorder(null);
         Pasword2Text.setCaretColor(new java.awt.Color(20, 77, 95));
-        Pasword2Text.setOpaque(false);
-        jPanel1.add(Pasword2Text, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 380, 230, 40));
+        Pasword2Text.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Pasword2TextActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Pasword2Text, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 380, 280, 40));
 
-        UsernameText.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        UsernameText.setBackground(new java.awt.Color(255, 255, 255));
+        UsernameText.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         UsernameText.setForeground(new java.awt.Color(20, 77, 95));
         UsernameText.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        UsernameText.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        UsernameText.setBorder(null);
         UsernameText.setCaretColor(new java.awt.Color(20, 77, 95));
-        UsernameText.setOpaque(false);
         UsernameText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 UsernameTextActionPerformed(evt);
             }
         });
-        jPanel1.add(UsernameText, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, 230, 40));
+        jPanel1.add(UsernameText, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 230, 280, 40));
 
-        EmailText.setBackground(new java.awt.Color(60, 63, 65));
-        EmailText.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        EmailText.setBackground(new java.awt.Color(255, 255, 255));
+        EmailText.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         EmailText.setForeground(new java.awt.Color(20, 77, 95));
         EmailText.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        EmailText.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        EmailText.setBorder(null);
         EmailText.setCaretColor(new java.awt.Color(20, 77, 95));
-        EmailText.setOpaque(false);
         EmailText.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
                 EmailTextPropertyChange(evt);
             }
         });
-        jPanel1.add(EmailText, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, 230, 40));
+        jPanel1.add(EmailText, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 280, 280, 40));
 
         RegisterButton.setBackground(new java.awt.Color(113, 177, 128));
         RegisterButton.setFont(new java.awt.Font("Dubai Light", 0, 24)); // NOI18N
@@ -97,7 +101,7 @@ public class RegisterForm extends javax.swing.JFrame {
         RegisterButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         RegisterButton.setText("REGISTER");
         RegisterButton.setOpaque(true);
-        jPanel1.add(RegisterButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 440, 190, -1));
+        jPanel1.add(RegisterButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 440, 200, -1));
 
         ExitButton.setFont(new java.awt.Font("Dubai Light", 1, 36)); // NOI18N
         ExitButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -166,6 +170,10 @@ public class RegisterForm extends javax.swing.JFrame {
     private void UsernameTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsernameTextActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_UsernameTextActionPerformed
+
+    private void Pasword2TextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pasword2TextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Pasword2TextActionPerformed
     public void setLocationRelativeToSelector(int x, int y){
         Formularios.EnterSelection MenuSelection = new Formularios.EnterSelection();
         //this.setBounds(MenuSelection.xOnScreen, MenuSelection.yOnScreen, 400, 500);
