@@ -30,7 +30,6 @@ public class LoginForm extends javax.swing.JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
-        MinimizarNormal = new javax.swing.JLabel();
         Maximizar = new javax.swing.JLabel();
         Minimizar = new javax.swing.JLabel();
         Pasword1Text = new javax.swing.JPasswordField();
@@ -51,19 +50,6 @@ public class LoginForm extends javax.swing.JFrame {
         jPanel1.setMaximumSize(new java.awt.Dimension(400, 500));
         jPanel1.setPreferredSize(new java.awt.Dimension(400, 500));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        MinimizarNormal.setBackground(new java.awt.Color(30, 30, 30));
-        MinimizarNormal.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        MinimizarNormal.setForeground(new java.awt.Color(255, 255, 255));
-        MinimizarNormal.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        MinimizarNormal.setText("▭");
-        MinimizarNormal.setAlignmentY(0.0F);
-        MinimizarNormal.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                MinimizarNormalMouseClicked(evt);
-            }
-        });
-        jPanel1.add(MinimizarNormal, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 10, 30, 30));
 
         Maximizar.setBackground(new java.awt.Color(30, 30, 30));
         Maximizar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -122,7 +108,6 @@ public class LoginForm extends javax.swing.JFrame {
         LoginButton.setForeground(new java.awt.Color(255, 255, 255));
         LoginButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LoginButton.setText("LOGIN");
-        LoginButton.setEnabled(false);
         LoginButton.setOpaque(true);
         LoginButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -233,9 +218,12 @@ public class LoginForm extends javax.swing.JFrame {
     int xx, xy;
     private void BackgroundMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackgroundMouseDragged
         // TODO add your handling code here:
-        int x = evt.getXOnScreen();
-        int y = evt.getYOnScreen();
-        this.setLocation(x-xx,y-xy);
+
+        if (this.getBounds().getWidth()<410){
+            int x = evt.getXOnScreen();
+            int y = evt.getYOnScreen();
+            this.setLocation(x-xx,y-xy);
+        }
     }//GEN-LAST:event_BackgroundMouseDragged
     
     private void BackgroundMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackgroundMousePressed
@@ -247,21 +235,64 @@ public class LoginForm extends javax.swing.JFrame {
     private void LoginButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginButtonMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_LoginButtonMouseClicked
+    private int xMinimized = 0;
+    private int yMinimized = 0;
+    private int Altura = 0;
+    private int Anchura = 0;
+
+    public int getxMinimized() {
+        return xMinimized;
+    }
+
+    public void setxMinimized(int xMinimized) {
+        this.xMinimized = xMinimized;
+    }
+
+    public int getyMinimized() {
+        return yMinimized;
+    }
+
+    public void setyMinimized(int yMinimized) {
+        this.yMinimized = yMinimized;
+    }
+
+    public int getAltura() {
+        return Altura;
+    }
+
+    public void setAltura(int Altura) {
+        this.Altura = Altura;
+    }
+
+    public int getAnchura() {
+        return Anchura;
+    }
+
+    public void setAnchura(int Anchura) {
+        this.Anchura = Anchura;
+    }
+
+    
+    
+    private void MaximizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MaximizarMouseClicked
+        // TODO add your handling code here:
+
+        if (this.getExtendedState() == MAXIMIZED_BOTH){
+            this.setExtendedState(NORMAL);
+            this.setBounds(getxMinimized(), getyMinimized(), 400, 500);
+        }else{
+            setxMinimized(this.getLocationOnScreen().x);
+            setyMinimized(this.getLocationOnScreen().y);
+            setAnchura(this.getWidth());
+            setAltura(this.getHeight());
+            this.setExtendedState(MAXIMIZED_BOTH);
+            
+        }
+    }//GEN-LAST:event_MaximizarMouseClicked
 
     private void MinimizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MinimizarMouseClicked
         this.setExtendedState(1);
     }//GEN-LAST:event_MinimizarMouseClicked
-
-    private void MaximizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MaximizarMouseClicked
-        // TODO add your handling code here:
-        this.setExtendedState(MAXIMIZED_BOTH);
-        MinimizarNormal.setFocusable(true);
-    }//GEN-LAST:event_MaximizarMouseClicked
-
-    private void MinimizarNormalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MinimizarNormalMouseClicked
-        // TODO add your handling code here:
-        System.exit(0);
-    }//GEN-LAST:event_MinimizarNormalMouseClicked
 
     /**
      * @param args the command line arguments
@@ -305,7 +336,6 @@ public class LoginForm extends javax.swing.JFrame {
     private javax.swing.JLabel LoginButton;
     private javax.swing.JLabel Maximizar;
     private javax.swing.JLabel Minimizar;
-    private javax.swing.JLabel MinimizarNormal;
     private javax.swing.JPasswordField Pasword1Text;
     private javax.swing.JLabel ReturnButton;
     private javax.swing.JPanel jPanel1;

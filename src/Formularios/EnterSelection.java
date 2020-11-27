@@ -133,9 +133,11 @@ public class EnterSelection extends javax.swing.JFrame {
 
     private void BackgroundMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackgroundMouseDragged
         // TODO add your handling code here:
-        int x = evt.getXOnScreen();
-        int y = evt.getYOnScreen();
-        this.setLocation(x-xx,y-xy);
+        if (this.getBounds().getWidth()<410){
+            int x = evt.getXOnScreen();
+            int y = evt.getYOnScreen();
+            this.setLocation(x-xx,y-xy);
+        }
     }//GEN-LAST:event_BackgroundMouseDragged
     int xx,xy;
     private void BackgroundMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackgroundMousePressed
@@ -201,7 +203,7 @@ public class EnterSelection extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
