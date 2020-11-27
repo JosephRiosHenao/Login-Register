@@ -26,8 +26,13 @@ public class LoginForm extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
+        jPanel2 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
+        MinimizarNormal = new javax.swing.JLabel();
+        Maximizar = new javax.swing.JLabel();
+        Minimizar = new javax.swing.JLabel();
         Pasword1Text = new javax.swing.JPasswordField();
         EmailText = new javax.swing.JTextField();
         LoginButton = new javax.swing.JLabel();
@@ -39,11 +44,52 @@ public class LoginForm extends javax.swing.JFrame {
         setMaximumSize(new java.awt.Dimension(400, 500));
         setMinimumSize(new java.awt.Dimension(400, 500));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(400, 500));
+
+        jPanel2.setBackground(new java.awt.Color(0, 153, 102));
+        jPanel2.setLayout(new java.awt.GridBagLayout());
 
         jPanel1.setMaximumSize(new java.awt.Dimension(400, 500));
         jPanel1.setPreferredSize(new java.awt.Dimension(400, 500));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        MinimizarNormal.setBackground(new java.awt.Color(30, 30, 30));
+        MinimizarNormal.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        MinimizarNormal.setForeground(new java.awt.Color(255, 255, 255));
+        MinimizarNormal.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        MinimizarNormal.setText("▭");
+        MinimizarNormal.setAlignmentY(0.0F);
+        MinimizarNormal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                MinimizarNormalMouseClicked(evt);
+            }
+        });
+        jPanel1.add(MinimizarNormal, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 10, 30, 30));
+
+        Maximizar.setBackground(new java.awt.Color(30, 30, 30));
+        Maximizar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        Maximizar.setForeground(new java.awt.Color(255, 255, 255));
+        Maximizar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Maximizar.setText("▭");
+        Maximizar.setAlignmentY(0.0F);
+        Maximizar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                MaximizarMouseClicked(evt);
+            }
+        });
+        jPanel1.add(Maximizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 10, 30, 30));
+
+        Minimizar.setBackground(new java.awt.Color(30, 30, 30));
+        Minimizar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        Minimizar.setForeground(new java.awt.Color(255, 255, 255));
+        Minimizar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Minimizar.setText("—");
+        Minimizar.setAlignmentY(0.0F);
+        Minimizar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                MinimizarMouseClicked(evt);
+            }
+        });
+        jPanel1.add(Minimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 10, 30, 30));
 
         Pasword1Text.setBackground(new java.awt.Color(255, 255, 255));
         Pasword1Text.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -76,6 +122,7 @@ public class LoginForm extends javax.swing.JFrame {
         LoginButton.setForeground(new java.awt.Color(255, 255, 255));
         LoginButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LoginButton.setText("LOGIN");
+        LoginButton.setEnabled(false);
         LoginButton.setOpaque(true);
         LoginButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -95,7 +142,7 @@ public class LoginForm extends javax.swing.JFrame {
         });
         jPanel1.add(ReturnButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, 30));
 
-        ExitButton.setFont(new java.awt.Font("Dubai Light", 1, 36)); // NOI18N
+        ExitButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         ExitButton.setForeground(new java.awt.Color(255, 255, 255));
         ExitButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ExitButton.setText("X");
@@ -119,15 +166,21 @@ public class LoginForm extends javax.swing.JFrame {
         });
         jPanel1.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        jPanel2.add(jPanel1, gridBagConstraints);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -195,6 +248,21 @@ public class LoginForm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_LoginButtonMouseClicked
 
+    private void MinimizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MinimizarMouseClicked
+        this.setExtendedState(1);
+    }//GEN-LAST:event_MinimizarMouseClicked
+
+    private void MaximizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MaximizarMouseClicked
+        // TODO add your handling code here:
+        this.setExtendedState(MAXIMIZED_BOTH);
+        MinimizarNormal.setFocusable(true);
+    }//GEN-LAST:event_MaximizarMouseClicked
+
+    private void MinimizarNormalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MinimizarNormalMouseClicked
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_MinimizarNormalMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -235,8 +303,12 @@ public class LoginForm extends javax.swing.JFrame {
     private javax.swing.JTextField EmailText;
     private javax.swing.JLabel ExitButton;
     private javax.swing.JLabel LoginButton;
+    private javax.swing.JLabel Maximizar;
+    private javax.swing.JLabel Minimizar;
+    private javax.swing.JLabel MinimizarNormal;
     private javax.swing.JPasswordField Pasword1Text;
     private javax.swing.JLabel ReturnButton;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }

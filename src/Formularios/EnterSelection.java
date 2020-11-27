@@ -30,9 +30,12 @@ public class EnterSelection extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
+        jPanel2 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        ForgotButton = new javax.swing.JLabel();
         LoginButton = new javax.swing.JLabel();
         RegisterButton = new javax.swing.JLabel();
         ExitButton = new javax.swing.JLabel();
@@ -41,13 +44,17 @@ public class EnterSelection extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
+        jPanel2.setBackground(new java.awt.Color(0, 153, 102));
+        jPanel2.setLayout(new java.awt.GridBagLayout());
+
         jPanel1.setMaximumSize(new java.awt.Dimension(400, 500));
         jPanel1.setMinimumSize(new java.awt.Dimension(400, 500));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(331, 10, 30, 30));
 
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Forgot your account?");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 470, -1, -1));
+        ForgotButton.setForeground(new java.awt.Color(255, 255, 255));
+        ForgotButton.setText("Forgot your account?");
+        jPanel1.add(ForgotButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 470, -1, -1));
 
         LoginButton.setBackground(new java.awt.Color(113, 177, 128));
         LoginButton.setFont(new java.awt.Font("Dubai Light", 0, 24)); // NOI18N
@@ -99,15 +106,21 @@ public class EnterSelection extends javax.swing.JFrame {
         });
         jPanel1.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 500));
 
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        jPanel2.add(jPanel1, gridBagConstraints);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -164,12 +177,10 @@ public class EnterSelection extends javax.swing.JFrame {
     }
     public void setXOnScreen(int xOnScreen){
         this.xOnScreen = xOnScreen;
-        System.out.println(xOnScreen+"  "+yOnScreen);
     } 
     
     public void setYOnScreen(int yOnScreen){
         this.yOnScreen = yOnScreen;
-        System.out.println(xOnScreen+"  "+yOnScreen);
     }
     
     public int getXOnScreen(){
@@ -217,9 +228,11 @@ public class EnterSelection extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;
     private javax.swing.JLabel ExitButton;
+    private javax.swing.JLabel ForgotButton;
     private javax.swing.JLabel LoginButton;
     private javax.swing.JLabel RegisterButton;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }
