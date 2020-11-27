@@ -38,13 +38,16 @@ public class LoginForm extends javax.swing.JFrame {
         ReturnButton = new javax.swing.JLabel();
         ExitButton = new javax.swing.JLabel();
         Background = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(400, 500));
         setMinimumSize(new java.awt.Dimension(400, 500));
         setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(400, 500));
 
         jPanel2.setBackground(new java.awt.Color(0, 153, 102));
+        jPanel2.setOpaque(false);
         jPanel2.setLayout(new java.awt.GridBagLayout());
 
         jPanel1.setMaximumSize(new java.awt.Dimension(400, 500));
@@ -157,15 +160,23 @@ public class LoginForm extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         jPanel2.add(jPanel1, gridBagConstraints);
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Gradient.png"))); // NOI18N
+        jLabel1.setMaximumSize(new java.awt.Dimension(1920, 1080));
+        jLabel1.setMinimumSize(new java.awt.Dimension(400, 500));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE))
         );
 
         pack();
@@ -338,6 +349,7 @@ public class LoginForm extends javax.swing.JFrame {
     private javax.swing.JLabel Minimizar;
     private javax.swing.JPasswordField Pasword1Text;
     private javax.swing.JLabel ReturnButton;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
