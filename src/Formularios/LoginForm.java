@@ -44,7 +44,6 @@ public class LoginForm extends javax.swing.JFrame {
         setMaximumSize(new java.awt.Dimension(400, 500));
         setMinimumSize(new java.awt.Dimension(400, 500));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(400, 500));
 
         jPanel2.setBackground(new java.awt.Color(0, 153, 102));
         jPanel2.setOpaque(false);
@@ -161,7 +160,6 @@ public class LoginForm extends javax.swing.JFrame {
         jPanel2.add(jPanel1, gridBagConstraints);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Gradient.png"))); // NOI18N
-        jLabel1.setMaximumSize(new java.awt.Dimension(1920, 1080));
         jLabel1.setMinimumSize(new java.awt.Dimension(400, 500));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

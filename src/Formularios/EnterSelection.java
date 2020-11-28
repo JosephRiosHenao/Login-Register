@@ -5,8 +5,6 @@
  */
 package Formularios;
 
-import java.awt.geom.Point2D;
-
 /**
  *
  * @author RiosHenao
@@ -45,6 +43,7 @@ public class EnterSelection extends javax.swing.JFrame {
         setUndecorated(true);
 
         jPanel2.setBackground(new java.awt.Color(0, 153, 102));
+        jPanel2.setOpaque(false);
         jPanel2.setLayout(new java.awt.GridBagLayout());
 
         jPanel1.setMaximumSize(new java.awt.Dimension(400, 500));
@@ -104,12 +103,13 @@ public class EnterSelection extends javax.swing.JFrame {
                 BackgroundMousePressed(evt);
             }
         });
-        jPanel1.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 500));
+        jPanel1.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.weightx = 400.0;
+        gridBagConstraints.weighty = 500.0;
         jPanel2.add(jPanel1, gridBagConstraints);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
