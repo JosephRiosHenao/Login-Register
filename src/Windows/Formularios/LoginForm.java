@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Formularios;
+package Windows.Formularios;
 
 /**
  *
  * @author RiosHenao
  */
-public class RegisterForm extends javax.swing.JFrame {
-    
+public class LoginForm extends javax.swing.JFrame {
+
     /**
-     * Creates new form RegisterForm
+     * Creates new form LoginForm
      */
-    public RegisterForm() {
+    public LoginForm() {
         initComponents();
     }
 
@@ -30,24 +30,54 @@ public class RegisterForm extends javax.swing.JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
+        Maximizar = new javax.swing.JLabel();
+        Minimizar = new javax.swing.JLabel();
         Pasword1Text = new javax.swing.JPasswordField();
-        Pasword2Text = new javax.swing.JPasswordField();
-        UsernameText = new javax.swing.JTextField();
         EmailText = new javax.swing.JTextField();
+        LoginButton = new javax.swing.JLabel();
         ReturnButton = new javax.swing.JLabel();
-        RegisterButton = new javax.swing.JLabel();
         ExitButton = new javax.swing.JLabel();
         Background = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(400, 500));
+        setMinimumSize(new java.awt.Dimension(400, 500));
         setUndecorated(true);
-        setResizable(false);
 
         jPanel2.setBackground(new java.awt.Color(0, 153, 102));
+        jPanel2.setOpaque(false);
         jPanel2.setLayout(new java.awt.GridBagLayout());
 
         jPanel1.setMaximumSize(new java.awt.Dimension(400, 500));
+        jPanel1.setPreferredSize(new java.awt.Dimension(400, 500));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Maximizar.setBackground(new java.awt.Color(30, 30, 30));
+        Maximizar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        Maximizar.setForeground(new java.awt.Color(255, 255, 255));
+        Maximizar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Maximizar.setText("▭");
+        Maximizar.setAlignmentY(0.0F);
+        Maximizar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                MaximizarMouseClicked(evt);
+            }
+        });
+        jPanel1.add(Maximizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 10, 30, 30));
+
+        Minimizar.setBackground(new java.awt.Color(30, 30, 30));
+        Minimizar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        Minimizar.setForeground(new java.awt.Color(255, 255, 255));
+        Minimizar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Minimizar.setText("—");
+        Minimizar.setAlignmentY(0.0F);
+        Minimizar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                MinimizarMouseClicked(evt);
+            }
+        });
+        jPanel1.add(Minimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 10, 30, 30));
 
         Pasword1Text.setBackground(new java.awt.Color(255, 255, 255));
         Pasword1Text.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -60,33 +90,7 @@ public class RegisterForm extends javax.swing.JFrame {
                 Pasword1TextActionPerformed(evt);
             }
         });
-        jPanel1.add(Pasword1Text, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 330, 280, 40));
-
-        Pasword2Text.setBackground(new java.awt.Color(255, 255, 255));
-        Pasword2Text.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        Pasword2Text.setForeground(new java.awt.Color(20, 77, 95));
-        Pasword2Text.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        Pasword2Text.setBorder(null);
-        Pasword2Text.setCaretColor(new java.awt.Color(20, 77, 95));
-        Pasword2Text.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Pasword2TextActionPerformed(evt);
-            }
-        });
-        jPanel1.add(Pasword2Text, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 380, 280, 40));
-
-        UsernameText.setBackground(new java.awt.Color(255, 255, 255));
-        UsernameText.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        UsernameText.setForeground(new java.awt.Color(20, 77, 95));
-        UsernameText.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        UsernameText.setBorder(null);
-        UsernameText.setCaretColor(new java.awt.Color(20, 77, 95));
-        UsernameText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                UsernameTextActionPerformed(evt);
-            }
-        });
-        jPanel1.add(UsernameText, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 230, 280, 40));
+        jPanel1.add(Pasword1Text, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, 280, 40));
 
         EmailText.setBackground(new java.awt.Color(255, 255, 255));
         EmailText.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -99,7 +103,20 @@ public class RegisterForm extends javax.swing.JFrame {
                 EmailTextPropertyChange(evt);
             }
         });
-        jPanel1.add(EmailText, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 280, 280, 40));
+        jPanel1.add(EmailText, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 280, 40));
+
+        LoginButton.setBackground(new java.awt.Color(113, 177, 128));
+        LoginButton.setFont(new java.awt.Font("Dubai Light", 0, 24)); // NOI18N
+        LoginButton.setForeground(new java.awt.Color(255, 255, 255));
+        LoginButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LoginButton.setText("LOGIN");
+        LoginButton.setOpaque(true);
+        LoginButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LoginButtonMouseClicked(evt);
+            }
+        });
+        jPanel1.add(LoginButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 370, 190, -1));
 
         ReturnButton.setFont(new java.awt.Font("Dubai Light", 1, 36)); // NOI18N
         ReturnButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -112,15 +129,7 @@ public class RegisterForm extends javax.swing.JFrame {
         });
         jPanel1.add(ReturnButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, 30));
 
-        RegisterButton.setBackground(new java.awt.Color(113, 177, 128));
-        RegisterButton.setFont(new java.awt.Font("Dubai Light", 0, 24)); // NOI18N
-        RegisterButton.setForeground(new java.awt.Color(255, 255, 255));
-        RegisterButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RegisterButton.setText("REGISTER");
-        RegisterButton.setOpaque(true);
-        jPanel1.add(RegisterButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 440, 200, -1));
-
-        ExitButton.setFont(new java.awt.Font("Dubai Light", 1, 36)); // NOI18N
+        ExitButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         ExitButton.setForeground(new java.awt.Color(255, 255, 255));
         ExitButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ExitButton.setText("X");
@@ -142,7 +151,7 @@ public class RegisterForm extends javax.swing.JFrame {
                 BackgroundMousePressed(evt);
             }
         });
-        jPanel1.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 500));
+        jPanel1.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -150,37 +159,42 @@ public class RegisterForm extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         jPanel2.add(jPanel1, gridBagConstraints);
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Gradient.png"))); // NOI18N
+        jLabel1.setMinimumSize(new java.awt.Dimension(400, 500));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ExitButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitButtonMouseClicked
-        // TODO add your handling code here:
-        System.exit(0);
-    }//GEN-LAST:event_ExitButtonMouseClicked
+    public int getXOnScreen() {
+        return XOnScreen;
+    }
 
-    private void BackgroundMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackgroundMouseDragged
-        // TODO add your handling code here:
-        int x = evt.getXOnScreen();
-        int y = evt.getYOnScreen();
-        this.setLocation(x-xx,y-xy);
-    }//GEN-LAST:event_BackgroundMouseDragged
-    int xx, xy;
-    private void BackgroundMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackgroundMousePressed
-        // TODO add your handling code here:
-        xx = evt.getX();
-        xy = evt.getY();
-    }//GEN-LAST:event_BackgroundMousePressed
+    public int getYOnScreen() {
+        return YOnScreen;
+    }
+
+    public void setYOnScreen(int YOnScreen) {
+        this.YOnScreen = YOnScreen;
+    }
+    
+    public void setXOnScreen(int XOnScreen) {
+        this.XOnScreen = XOnScreen;
+    }
 
     private void Pasword1TextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pasword1TextActionPerformed
         // TODO add your handling code here:
@@ -189,49 +203,96 @@ public class RegisterForm extends javax.swing.JFrame {
     private void EmailTextPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_EmailTextPropertyChange
         // TODO add your handling code here:
     }//GEN-LAST:event_EmailTextPropertyChange
-
-    private void UsernameTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsernameTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_UsernameTextActionPerformed
-
-    private void Pasword2TextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pasword2TextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Pasword2TextActionPerformed
-
+    int XOnScreen, YOnScreen;
     private void ReturnButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ReturnButtonMouseClicked
         // TODO add your handling code here:
         int x = this.getLocationOnScreen().x;
         int y = this.getLocationOnScreen().y;
         setXOnScreen(x);
         setYOnScreen(y);
-        Formularios.EnterSelection Selection = new Formularios.EnterSelection();
+        Windows.Formularios.EnterSelection Selection = new Windows.Formularios.EnterSelection();
         Selection.setLocationRelativeToRegisterLogin(getXOnScreen(), getYOnScreen());
         Selection.setVisible(true);
         this.setVisible(false);
-
     }//GEN-LAST:event_ReturnButtonMouseClicked
-    int xOnScreen, yOnScreen;
-    public void setXOnScreen(int xOnScreen){
-        this.xOnScreen = xOnScreen;
-        System.out.println(xOnScreen+"  "+yOnScreen);
-    } 
-    
-    public void setYOnScreen(int yOnScreen){
-        this.yOnScreen = yOnScreen;
-        System.out.println(xOnScreen+"  "+yOnScreen);
-    }
-    
-    public int getXOnScreen(){
-        return xOnScreen;
-    }
-    
-    public int getYOnScreen(){
-        return yOnScreen;
-    }
     public void setLocationRelativeToSelector(int x, int y){
-        Formularios.EnterSelection MenuSelection = new Formularios.EnterSelection();
         this.setBounds(x,y,400,500);
     }
+    
+    
+    private void ExitButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitButtonMouseClicked
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_ExitButtonMouseClicked
+    int xx, xy;
+    private void BackgroundMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackgroundMouseDragged
+        // TODO add your handling code here:
+
+        if (this.getBounds().getWidth()<410){
+            int x = evt.getXOnScreen();
+            int y = evt.getYOnScreen();
+            this.setLocation(x-xx,y-xy);
+        }
+    }//GEN-LAST:event_BackgroundMouseDragged
+    
+    private void BackgroundMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackgroundMousePressed
+        // TODO add your handling code here:
+        xx = evt.getX();
+        xy = evt.getY();
+    }//GEN-LAST:event_BackgroundMousePressed
+
+    private void LoginButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginButtonMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LoginButtonMouseClicked
+    private int xMinimized = 0;
+    private int yMinimized = 0;
+    private int StateForm = 0;
+
+    public int getStateForm() {
+        return StateForm;
+    }
+
+    public void setStateForm(int State) {
+        this.StateForm = State;
+    }
+
+
+    public int getxMinimized() {
+        return xMinimized;
+    }
+
+    public void setxMinimized(int xMinimized) {
+        this.xMinimized = xMinimized;
+    }
+
+    public int getyMinimized() {
+        return yMinimized;
+    }
+
+    public void setyMinimized(int yMinimized) {
+        this.yMinimized = yMinimized;
+    }
+  
+    
+    private void MaximizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MaximizarMouseClicked
+        // TODO add your handling code here:
+
+        if (this.getExtendedState() == MAXIMIZED_BOTH){
+            this.setExtendedState(NORMAL);
+            this.setBounds(getxMinimized(), getyMinimized(), 400, 500);
+        }else{
+            setxMinimized(this.getLocationOnScreen().x);
+            setyMinimized(this.getLocationOnScreen().y);
+            this.setExtendedState(MAXIMIZED_BOTH);
+            
+        }
+    }//GEN-LAST:event_MaximizarMouseClicked
+
+    private void MinimizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MinimizarMouseClicked
+        setStateForm(this.getExtendedState());
+        this.setExtendedState(1);   
+    }//GEN-LAST:event_MinimizarMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -249,20 +310,20 @@ public class RegisterForm extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(RegisterForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(RegisterForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(RegisterForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(RegisterForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new RegisterForm().setVisible(true);
+                new LoginForm().setVisible(true);
             }
         });
     }
@@ -271,11 +332,12 @@ public class RegisterForm extends javax.swing.JFrame {
     private javax.swing.JLabel Background;
     private javax.swing.JTextField EmailText;
     private javax.swing.JLabel ExitButton;
+    private javax.swing.JLabel LoginButton;
+    private javax.swing.JLabel Maximizar;
+    private javax.swing.JLabel Minimizar;
     private javax.swing.JPasswordField Pasword1Text;
-    private javax.swing.JPasswordField Pasword2Text;
-    private javax.swing.JLabel RegisterButton;
     private javax.swing.JLabel ReturnButton;
-    private javax.swing.JTextField UsernameText;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables

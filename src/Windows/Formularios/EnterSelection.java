@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Formularios;
+package Windows.Formularios;
 
 /**
  *
@@ -152,7 +152,7 @@ public class EnterSelection extends javax.swing.JFrame {
         int x = this.getLocationOnScreen().x;
         int y = this.getLocationOnScreen().y;
         
-        Formularios.LoginForm Login = new Formularios.LoginForm();
+        Windows.Formularios.LoginForm Login = new Windows.Formularios.LoginForm();
         setXOnScreen(x);
         setYOnScreen(y);
         Login.setLocationRelativeToSelector(getXOnScreen(), getYOnScreen());
@@ -165,7 +165,7 @@ public class EnterSelection extends javax.swing.JFrame {
         int x = this.getLocationOnScreen().x;
         int y = this.getLocationOnScreen().y;
         
-        Formularios.RegisterForm Register = new Formularios.RegisterForm();
+        Windows.Formularios.RegisterForm Register = new Windows.Formularios.RegisterForm();
         setXOnScreen(x);
         setYOnScreen(y);
         Register.setLocationRelativeToSelector(getXOnScreen(), getYOnScreen());

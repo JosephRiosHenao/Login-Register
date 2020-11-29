@@ -1,0 +1,7 @@
+{
+    "cmake.configureOnOpen": false,
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Program Files\\NetBeans 8.2\\java\\modules\\ext\\AbsoluteLayout.jar"
+    ]
+}
