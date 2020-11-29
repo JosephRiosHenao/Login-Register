@@ -32,6 +32,24 @@ public class EnterSelection extends javax.swing.JFrame {
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
+        PanelContenedor = new javax.swing.JPanel();
+        WindowControler = new javax.swing.JPanel();
+        ExitButton1 = new javax.swing.JLabel();
+        Maximizar = new javax.swing.JLabel();
+        Minimizar = new javax.swing.JLabel();
+        SelectionPanel = new javax.swing.JPanel();
+        ComponentsSelectionPanel = new javax.swing.JPanel();
+        ForgotButton = new javax.swing.JLabel();
+        LoginButton = new javax.swing.JLabel();
+        RegisterButton = new javax.swing.JLabel();
+        Background = new javax.swing.JLabel();
+        LoginPanel = new javax.swing.JPanel();
+        ComponentsLoginPanel = new javax.swing.JPanel();
+        PasswordTextIntLogin = new javax.swing.JPasswordField();
+        EmailTextInLogin = new javax.swing.JTextField();
+        LoginButtonInLogin = new javax.swing.JLabel();
+        ReturnButtonInLogin = new javax.swing.JLabel();
+        Background1 = new javax.swing.JLabel();
         RegisterPanel = new javax.swing.JPanel();
         ComponentsRegisterPanel = new javax.swing.JPanel();
         PasswordTextInRegister = new javax.swing.JPasswordField();
@@ -41,34 +59,219 @@ public class EnterSelection extends javax.swing.JFrame {
         ReturnButtonInRegister = new javax.swing.JLabel();
         RegisterButtonInRegister = new javax.swing.JLabel();
         Background2 = new javax.swing.JLabel();
-        LoginPanel = new javax.swing.JPanel();
-        ComponentsLoginPanel = new javax.swing.JPanel();
-        WindowControler = new javax.swing.JPanel();
-        ExitButton1 = new javax.swing.JLabel();
-        Maximizar = new javax.swing.JLabel();
-        Minimizar = new javax.swing.JLabel();
-        PasswordTextIntLogin = new javax.swing.JPasswordField();
-        EmailTextInLogin = new javax.swing.JTextField();
-        LoginButtonInLogin = new javax.swing.JLabel();
-        ReturnButtonInLogin = new javax.swing.JLabel();
-        Background1 = new javax.swing.JLabel();
-        SelectionPanel = new javax.swing.JPanel();
-        ComponentsSelectionPanel = new javax.swing.JPanel();
-        ForgotButton = new javax.swing.JLabel();
-        LoginButton = new javax.swing.JLabel();
-        RegisterButton = new javax.swing.JLabel();
-        Background = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(400, 500));
         setMinimumSize(new java.awt.Dimension(400, 500));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(400, 500));
-        setResizable(false);
+        addWindowFocusListener(new java.awt.event.WindowFocusListener() {
+            public void windowGainedFocus(java.awt.event.WindowEvent evt) {
+                formWindowGainedFocus(evt);
+            }
+            public void windowLostFocus(java.awt.event.WindowEvent evt) {
+            }
+        });
+
+        PanelContenedor.setBackground(new java.awt.Color(0, 153, 102));
+        PanelContenedor.setMaximumSize(new java.awt.Dimension(2147483647, 2147483647));
+        PanelContenedor.setMinimumSize(new java.awt.Dimension(400, 500));
+        PanelContenedor.setOpaque(false);
+        PanelContenedor.setPreferredSize(new java.awt.Dimension(400, 500));
+        PanelContenedor.setLayout(new java.awt.GridBagLayout());
+
+        WindowControler.setOpaque(false);
+        WindowControler.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        ExitButton1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        ExitButton1.setForeground(new java.awt.Color(255, 255, 255));
+        ExitButton1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ExitButton1.setText("X");
+        ExitButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ExitButton1MouseClicked(evt);
+            }
+        });
+        WindowControler.add(ExitButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 30, 30));
+
+        Maximizar.setBackground(new java.awt.Color(30, 30, 30));
+        Maximizar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        Maximizar.setForeground(new java.awt.Color(255, 255, 255));
+        Maximizar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Maximizar.setText("▭");
+        Maximizar.setAlignmentY(0.0F);
+        Maximizar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                MaximizarMouseClicked(evt);
+            }
+        });
+        WindowControler.add(Maximizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 30, 30));
+
+        Minimizar.setBackground(new java.awt.Color(30, 30, 30));
+        Minimizar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        Minimizar.setForeground(new java.awt.Color(255, 255, 255));
+        Minimizar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Minimizar.setText("—");
+        Minimizar.setAlignmentY(0.0F);
+        Minimizar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                MinimizarMouseClicked(evt);
+            }
+        });
+        WindowControler.add(Minimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, 30));
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.ipadx = 10;
+        gridBagConstraints.ipady = 10;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(5, 290, 0, 0);
+        PanelContenedor.add(WindowControler, gridBagConstraints);
+
+        SelectionPanel.setBackground(new java.awt.Color(0, 153, 102));
+        SelectionPanel.setOpaque(false);
+        SelectionPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        ComponentsSelectionPanel.setMaximumSize(new java.awt.Dimension(400, 500));
+        ComponentsSelectionPanel.setMinimumSize(new java.awt.Dimension(400, 500));
+        ComponentsSelectionPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        ForgotButton.setForeground(new java.awt.Color(255, 255, 255));
+        ForgotButton.setText("Forgot your account?");
+        ComponentsSelectionPanel.add(ForgotButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 470, -1, -1));
+
+        LoginButton.setBackground(new java.awt.Color(113, 177, 128));
+        LoginButton.setFont(new java.awt.Font("Dubai Light", 0, 24)); // NOI18N
+        LoginButton.setForeground(new java.awt.Color(255, 255, 255));
+        LoginButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LoginButton.setText("LOGIN");
+        LoginButton.setOpaque(true);
+        LoginButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LoginButtonMouseClicked(evt);
+            }
+        });
+        ComponentsSelectionPanel.add(LoginButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 230, 190, -1));
+
+        RegisterButton.setBackground(new java.awt.Color(113, 177, 128));
+        RegisterButton.setFont(new java.awt.Font("Dubai Light", 0, 24)); // NOI18N
+        RegisterButton.setForeground(new java.awt.Color(255, 255, 255));
+        RegisterButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        RegisterButton.setText("REGISTER");
+        RegisterButton.setOpaque(true);
+        RegisterButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                RegisterButtonMouseClicked(evt);
+            }
+        });
+        ComponentsSelectionPanel.add(RegisterButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 290, 190, -1));
+
+        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/MenuSelector.png"))); // NOI18N
+        Background.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                BackgroundMouseDragged(evt);
+            }
+        });
+        Background.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                BackgroundMousePressed(evt);
+            }
+        });
+        ComponentsSelectionPanel.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        SelectionPanel.add(ComponentsSelectionPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.gridheight = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        PanelContenedor.add(SelectionPanel, gridBagConstraints);
+
+        LoginPanel.setBackground(new java.awt.Color(0, 153, 102));
+        LoginPanel.setOpaque(false);
+        LoginPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        ComponentsLoginPanel.setMaximumSize(new java.awt.Dimension(400, 500));
+        ComponentsLoginPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        PasswordTextIntLogin.setBackground(new java.awt.Color(255, 255, 255));
+        PasswordTextIntLogin.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        PasswordTextIntLogin.setForeground(new java.awt.Color(20, 77, 95));
+        PasswordTextIntLogin.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        PasswordTextIntLogin.setBorder(null);
+        PasswordTextIntLogin.setCaretColor(new java.awt.Color(20, 77, 95));
+        PasswordTextIntLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PasswordTextIntLoginActionPerformed(evt);
+            }
+        });
+        ComponentsLoginPanel.add(PasswordTextIntLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, 280, 40));
+
+        EmailTextInLogin.setBackground(new java.awt.Color(255, 255, 255));
+        EmailTextInLogin.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        EmailTextInLogin.setForeground(new java.awt.Color(20, 77, 95));
+        EmailTextInLogin.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        EmailTextInLogin.setBorder(null);
+        EmailTextInLogin.setCaretColor(new java.awt.Color(20, 77, 95));
+        EmailTextInLogin.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                EmailTextInLoginPropertyChange(evt);
+            }
+        });
+        ComponentsLoginPanel.add(EmailTextInLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 280, 40));
+
+        LoginButtonInLogin.setBackground(new java.awt.Color(113, 177, 128));
+        LoginButtonInLogin.setFont(new java.awt.Font("Dubai Light", 0, 24)); // NOI18N
+        LoginButtonInLogin.setForeground(new java.awt.Color(255, 255, 255));
+        LoginButtonInLogin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LoginButtonInLogin.setText("LOGIN");
+        LoginButtonInLogin.setOpaque(true);
+        LoginButtonInLogin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LoginButtonInLoginMouseClicked(evt);
+            }
+        });
+        ComponentsLoginPanel.add(LoginButtonInLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 370, 190, -1));
+
+        ReturnButtonInLogin.setFont(new java.awt.Font("Dubai Light", 1, 36)); // NOI18N
+        ReturnButtonInLogin.setForeground(new java.awt.Color(255, 255, 255));
+        ReturnButtonInLogin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ReturnButtonInLogin.setText("X");
+        ReturnButtonInLogin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ReturnButtonInLoginMouseClicked(evt);
+            }
+        });
+        ComponentsLoginPanel.add(ReturnButtonInLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, 30));
+
+        Background1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/MenuSelector.png"))); // NOI18N
+        Background1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                Background1MouseDragged(evt);
+            }
+        });
+        Background1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                Background1MousePressed(evt);
+            }
+        });
+        ComponentsLoginPanel.add(Background1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 500));
+
+        LoginPanel.add(ComponentsLoginPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.gridheight = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        PanelContenedor.add(LoginPanel, gridBagConstraints);
 
         RegisterPanel.setBackground(new java.awt.Color(0, 153, 102));
         RegisterPanel.setOpaque(false);
-        RegisterPanel.setLayout(new java.awt.GridBagLayout());
+        RegisterPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         ComponentsRegisterPanel.setMaximumSize(new java.awt.Dimension(400, 500));
         ComponentsRegisterPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -157,243 +360,47 @@ public class EnterSelection extends javax.swing.JFrame {
         });
         ComponentsRegisterPanel.add(Background2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 500));
 
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.weightx = 400.0;
-        gridBagConstraints.weighty = 500.0;
-        RegisterPanel.add(ComponentsRegisterPanel, gridBagConstraints);
-
-        LoginPanel.setBackground(new java.awt.Color(0, 153, 102));
-        LoginPanel.setOpaque(false);
-        LoginPanel.setLayout(new java.awt.GridBagLayout());
-
-        ComponentsLoginPanel.setMaximumSize(new java.awt.Dimension(400, 500));
-        ComponentsLoginPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        WindowControler.setOpaque(false);
-
-        ExitButton1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        ExitButton1.setForeground(new java.awt.Color(255, 255, 255));
-        ExitButton1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ExitButton1.setText("X");
-        ExitButton1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ExitButton1MouseClicked(evt);
-            }
-        });
-
-        Maximizar.setBackground(new java.awt.Color(30, 30, 30));
-        Maximizar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        Maximizar.setForeground(new java.awt.Color(255, 255, 255));
-        Maximizar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Maximizar.setText("▭");
-        Maximizar.setAlignmentY(0.0F);
-        Maximizar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                MaximizarMouseClicked(evt);
-            }
-        });
-
-        Minimizar.setBackground(new java.awt.Color(30, 30, 30));
-        Minimizar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        Minimizar.setForeground(new java.awt.Color(255, 255, 255));
-        Minimizar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Minimizar.setText("—");
-        Minimizar.setAlignmentY(0.0F);
-        Minimizar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                MinimizarMouseClicked(evt);
-            }
-        });
-
-        javax.swing.GroupLayout WindowControlerLayout = new javax.swing.GroupLayout(WindowControler);
-        WindowControler.setLayout(WindowControlerLayout);
-        WindowControlerLayout.setHorizontalGroup(
-            WindowControlerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-            .addGroup(WindowControlerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(WindowControlerLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(Minimizar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, 0)
-                    .addComponent(Maximizar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, 0)
-                    .addComponent(ExitButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        WindowControlerLayout.setVerticalGroup(
-            WindowControlerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 40, Short.MAX_VALUE)
-            .addGroup(WindowControlerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(WindowControlerLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(WindowControlerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(Minimizar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(Maximizar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(ExitButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        ComponentsLoginPanel.add(WindowControler, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 100, 40));
-
-        PasswordTextIntLogin.setBackground(new java.awt.Color(255, 255, 255));
-        PasswordTextIntLogin.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        PasswordTextIntLogin.setForeground(new java.awt.Color(20, 77, 95));
-        PasswordTextIntLogin.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        PasswordTextIntLogin.setBorder(null);
-        PasswordTextIntLogin.setCaretColor(new java.awt.Color(20, 77, 95));
-        PasswordTextIntLogin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PasswordTextIntLoginActionPerformed(evt);
-            }
-        });
-        ComponentsLoginPanel.add(PasswordTextIntLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, 280, 40));
-
-        EmailTextInLogin.setBackground(new java.awt.Color(255, 255, 255));
-        EmailTextInLogin.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        EmailTextInLogin.setForeground(new java.awt.Color(20, 77, 95));
-        EmailTextInLogin.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        EmailTextInLogin.setBorder(null);
-        EmailTextInLogin.setCaretColor(new java.awt.Color(20, 77, 95));
-        EmailTextInLogin.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                EmailTextInLoginPropertyChange(evt);
-            }
-        });
-        ComponentsLoginPanel.add(EmailTextInLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 280, 40));
-
-        LoginButtonInLogin.setBackground(new java.awt.Color(113, 177, 128));
-        LoginButtonInLogin.setFont(new java.awt.Font("Dubai Light", 0, 24)); // NOI18N
-        LoginButtonInLogin.setForeground(new java.awt.Color(255, 255, 255));
-        LoginButtonInLogin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LoginButtonInLogin.setText("LOGIN");
-        LoginButtonInLogin.setOpaque(true);
-        LoginButtonInLogin.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                LoginButtonInLoginMouseClicked(evt);
-            }
-        });
-        ComponentsLoginPanel.add(LoginButtonInLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 370, 190, -1));
-
-        ReturnButtonInLogin.setFont(new java.awt.Font("Dubai Light", 1, 36)); // NOI18N
-        ReturnButtonInLogin.setForeground(new java.awt.Color(255, 255, 255));
-        ReturnButtonInLogin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ReturnButtonInLogin.setText("X");
-        ReturnButtonInLogin.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ReturnButtonInLoginMouseClicked(evt);
-            }
-        });
-        ComponentsLoginPanel.add(ReturnButtonInLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, 30));
-
-        Background1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/MenuSelector.png"))); // NOI18N
-        Background1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseDragged(java.awt.event.MouseEvent evt) {
-                Background1MouseDragged(evt);
-            }
-        });
-        Background1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                Background1MousePressed(evt);
-            }
-        });
-        ComponentsLoginPanel.add(Background1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 500));
+        RegisterPanel.add(ComponentsRegisterPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.gridheight = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.weightx = 400.0;
-        gridBagConstraints.weighty = 500.0;
-        LoginPanel.add(ComponentsLoginPanel, gridBagConstraints);
+        PanelContenedor.add(RegisterPanel, gridBagConstraints);
 
-        SelectionPanel.setBackground(new java.awt.Color(0, 153, 102));
-        SelectionPanel.setOpaque(false);
-        SelectionPanel.setLayout(new java.awt.GridBagLayout());
-
-        ComponentsSelectionPanel.setMaximumSize(new java.awt.Dimension(400, 500));
-        ComponentsSelectionPanel.setMinimumSize(new java.awt.Dimension(400, 500));
-        ComponentsSelectionPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        ForgotButton.setForeground(new java.awt.Color(255, 255, 255));
-        ForgotButton.setText("Forgot your account?");
-        ComponentsSelectionPanel.add(ForgotButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 470, -1, -1));
-
-        LoginButton.setBackground(new java.awt.Color(113, 177, 128));
-        LoginButton.setFont(new java.awt.Font("Dubai Light", 0, 24)); // NOI18N
-        LoginButton.setForeground(new java.awt.Color(255, 255, 255));
-        LoginButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LoginButton.setText("LOGIN");
-        LoginButton.setOpaque(true);
-        LoginButton.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Gradient.png"))); // NOI18N
+        jLabel1.setMinimumSize(new java.awt.Dimension(400, 500));
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                LoginButtonMouseClicked(evt);
+                jLabel1MouseClicked(evt);
             }
         });
-        ComponentsSelectionPanel.add(LoginButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 230, 190, -1));
-
-        RegisterButton.setBackground(new java.awt.Color(113, 177, 128));
-        RegisterButton.setFont(new java.awt.Font("Dubai Light", 0, 24)); // NOI18N
-        RegisterButton.setForeground(new java.awt.Color(255, 255, 255));
-        RegisterButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RegisterButton.setText("REGISTER");
-        RegisterButton.setOpaque(true);
-        RegisterButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                RegisterButtonMouseClicked(evt);
-            }
-        });
-        ComponentsSelectionPanel.add(RegisterButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 290, 190, -1));
-
-        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/MenuSelector.png"))); // NOI18N
-        Background.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseDragged(java.awt.event.MouseEvent evt) {
-                BackgroundMouseDragged(evt);
-            }
-        });
-        Background.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                BackgroundMousePressed(evt);
-            }
-        });
-        ComponentsSelectionPanel.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.weightx = 400.0;
-        gridBagConstraints.weighty = 500.0;
-        SelectionPanel.add(ComponentsSelectionPanel, gridBagConstraints);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(SelectionPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(PanelContenedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addComponent(LoginPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addComponent(RegisterPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(SelectionPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(PanelContenedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addComponent(LoginPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addComponent(RegisterPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void BackgroundMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackgroundMousePressed
+        // TODO add your handling code here:
+        xx = evt.getX();
+        xy = evt.getY();
+    }//GEN-LAST:event_BackgroundMousePressed
 
     private void BackgroundMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackgroundMouseDragged
         // TODO add your handling code here:
@@ -403,45 +410,140 @@ public class EnterSelection extends javax.swing.JFrame {
             this.setLocation(x-xx,y-xy);
         }
     }//GEN-LAST:event_BackgroundMouseDragged
-    int xx,xy;
-    private void BackgroundMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackgroundMousePressed
-        // TODO add your handling code here:
-        xx = evt.getX();
-        xy = evt.getY();
-    }//GEN-LAST:event_BackgroundMousePressed
-    private int xOnScreen;
-    private int yOnScreen;
-    private void LoginButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginButtonMouseClicked
-        // TODO add your handling code here:
-        LoginPanel.setVisible(true);
-        System.out.println("Login mostrado");
-        RegisterPanel.setVisible(false);
-        this.setVisible(false);
-        /*int x = this.getLocationOnScreen().x;
-        int y = this.getLocationOnScreen().y;
-        
-        Windows.Formularios.LoginForm Login = new Windows.Formularios.LoginForm();
-        setXOnScreen(x);
-        setYOnScreen(y);
-        Login.setLocationRelativeToSelector(getXOnScreen(), getYOnScreen());
-        Login.setVisible(true);
-        this.setVisible(false);*/
-    }//GEN-LAST:event_LoginButtonMouseClicked
 
     private void RegisterButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegisterButtonMouseClicked
         // TODO add your handling code here:
-        int x = this.getLocationOnScreen().x;
+        LoginPanel.setVisible(false);
+        RegisterPanel.setVisible(true);
+        SelectionPanel.setVisible(false);
+        System.out.println("Register mostrado");
+        /*int x = this.getLocationOnScreen().x;
         int y = this.getLocationOnScreen().y;
-        
+
         Windows.Formularios.RegisterForm Register = new Windows.Formularios.RegisterForm();
         setXOnScreen(x);
         setYOnScreen(y);
         Register.setLocationRelativeToSelector(getXOnScreen(), getYOnScreen());
         Register.setVisible(true);
-        this.setVisible(false);
-        
+        this.setVisible(false);*/
+
     }//GEN-LAST:event_RegisterButtonMouseClicked
-    private int xMinimized = 0;
+
+    private void LoginButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginButtonMouseClicked
+        // TODO add your handling code here:
+        LoginPanel.setVisible(true);
+        RegisterPanel.setVisible(false);
+        SelectionPanel.setVisible(false);
+        System.out.println("Login mostrado");
+    }//GEN-LAST:event_LoginButtonMouseClicked
+
+    private void Background2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Background2MousePressed
+        // TODO add your handling code here:
+        xx = evt.getX();
+        xy = evt.getY();
+    }//GEN-LAST:event_Background2MousePressed
+
+    private void Background2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Background2MouseDragged
+        // TODO add your handling code here:
+        int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+        this.setLocation(x-xx,y-xy);
+    }//GEN-LAST:event_Background2MouseDragged
+
+    private void ReturnButtonInRegisterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ReturnButtonInRegisterMouseClicked
+        // TODO add your handling code here:
+        SelectionPanel.setVisible(true);
+        LoginPanel.setVisible(false);
+        RegisterPanel.setVisible(false);
+        System.out.println("Selectot mostrado");
+    }//GEN-LAST:event_ReturnButtonInRegisterMouseClicked
+
+    private void EmailTextInResgisterPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_EmailTextInResgisterPropertyChange
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EmailTextInResgisterPropertyChange
+
+    private void UsernameTextInRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsernameTextInRegisterActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_UsernameTextInRegisterActionPerformed
+
+    private void PasswordConfrimTextInResgisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordConfrimTextInResgisterActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PasswordConfrimTextInResgisterActionPerformed
+
+    private void PasswordTextInRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordTextInRegisterActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PasswordTextInRegisterActionPerformed
+
+    private void Background1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Background1MousePressed
+        // TODO add your handling code here:
+        xx = evt.getX();
+        xy = evt.getY();
+    }//GEN-LAST:event_Background1MousePressed
+
+    private void Background1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Background1MouseDragged
+        // TODO add your handling code here:
+
+        if (this.getBounds().getWidth()<410){
+            int x = evt.getXOnScreen();
+            int y = evt.getYOnScreen();
+            this.setLocation(x-xx,y-xy);
+        }
+    }//GEN-LAST:event_Background1MouseDragged
+
+    private void ReturnButtonInLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ReturnButtonInLoginMouseClicked
+        // TODO add your handling code here:
+        SelectionPanel.setVisible(true);
+        LoginPanel.setVisible(false);
+        RegisterPanel.setVisible(false);
+        System.out.println("Selectot mostrado");
+    }//GEN-LAST:event_ReturnButtonInLoginMouseClicked
+
+    private void LoginButtonInLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginButtonInLoginMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LoginButtonInLoginMouseClicked
+
+    private void EmailTextInLoginPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_EmailTextInLoginPropertyChange
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EmailTextInLoginPropertyChange
+
+    private void PasswordTextIntLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordTextIntLoginActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PasswordTextIntLoginActionPerformed
+
+    private void MinimizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MinimizarMouseClicked
+        setStateForm(this.getExtendedState());
+        this.setExtendedState(1);
+    }//GEN-LAST:event_MinimizarMouseClicked
+
+    private void MaximizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MaximizarMouseClicked
+        // TODO add your handling code here:
+
+        if (this.getExtendedState() == MAXIMIZED_BOTH){
+            this.setExtendedState(NORMAL);
+            this.setBounds(getxMinimized(), getyMinimized(), 400, 500);
+        }else{
+            setxMinimized(this.getLocationOnScreen().x);
+            setyMinimized(this.getLocationOnScreen().y);
+            this.setExtendedState(MAXIMIZED_BOTH);
+
+        }
+    }//GEN-LAST:event_MaximizarMouseClicked
+
+    private void ExitButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitButton1MouseClicked
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_ExitButton1MouseClicked
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel1MouseClicked
+
+    private void formWindowGainedFocus(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowGainedFocus
+        // TODO add your handling code here:
+        this.setExtendedState(getStateForm());
+    }//GEN-LAST:event_formWindowGainedFocus
+    int xx,xy;    private int xOnScreen;
+    private int yOnScreen;    private int xMinimized = 0;
     private int yMinimized = 0;
     private int StateForm = 0;
 
@@ -468,112 +570,7 @@ public class EnterSelection extends javax.swing.JFrame {
 
     public void setyMinimized(int yMinimized) {
         this.yMinimized = yMinimized;
-    }
-    private void ExitButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitButton1MouseClicked
-        // TODO add your handling code here:
-        System.exit(0);
-    }//GEN-LAST:event_ExitButton1MouseClicked
-
-    private void MaximizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MaximizarMouseClicked
-        // TODO add your handling code here:
-
-        if (this.getExtendedState() == MAXIMIZED_BOTH){
-            this.setExtendedState(NORMAL);
-            this.setBounds(getxMinimized(), getyMinimized(), 400, 500);
-        }else{
-            setxMinimized(this.getLocationOnScreen().x);
-            setyMinimized(this.getLocationOnScreen().y);
-            this.setExtendedState(MAXIMIZED_BOTH);
-
-        }
-    }//GEN-LAST:event_MaximizarMouseClicked
-
-    private void MinimizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MinimizarMouseClicked
-        setStateForm(this.getExtendedState());
-        this.setExtendedState(1);
-    }//GEN-LAST:event_MinimizarMouseClicked
-
-    private void PasswordTextIntLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordTextIntLoginActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PasswordTextIntLoginActionPerformed
-
-    private void EmailTextInLoginPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_EmailTextInLoginPropertyChange
-        // TODO add your handling code here:
-    }//GEN-LAST:event_EmailTextInLoginPropertyChange
-
-    private void LoginButtonInLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginButtonInLoginMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_LoginButtonInLoginMouseClicked
-
-    private void ReturnButtonInLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ReturnButtonInLoginMouseClicked
-        // TODO add your handling code here:
-        int x = this.getLocationOnScreen().x;
-        int y = this.getLocationOnScreen().y;
-        setXOnScreen(x);
-        setYOnScreen(y);
-        Windows.Formularios.EnterSelection Selection = new Windows.Formularios.EnterSelection();
-        Selection.setLocationRelativeToRegisterLogin(getXOnScreen(), getYOnScreen());
-        Selection.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_ReturnButtonInLoginMouseClicked
-
-    private void Background1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Background1MouseDragged
-        // TODO add your handling code here:
-
-        if (this.getBounds().getWidth()<410){
-            int x = evt.getXOnScreen();
-            int y = evt.getYOnScreen();
-            this.setLocation(x-xx,y-xy);
-        }
-    }//GEN-LAST:event_Background1MouseDragged
-
-    private void Background1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Background1MousePressed
-        // TODO add your handling code here:
-        xx = evt.getX();
-        xy = evt.getY();
-    }//GEN-LAST:event_Background1MousePressed
-
-    private void PasswordTextInRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordTextInRegisterActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PasswordTextInRegisterActionPerformed
-
-    private void PasswordConfrimTextInResgisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordConfrimTextInResgisterActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PasswordConfrimTextInResgisterActionPerformed
-
-    private void UsernameTextInRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsernameTextInRegisterActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_UsernameTextInRegisterActionPerformed
-
-    private void EmailTextInResgisterPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_EmailTextInResgisterPropertyChange
-        // TODO add your handling code here:
-    }//GEN-LAST:event_EmailTextInResgisterPropertyChange
-
-    private void ReturnButtonInRegisterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ReturnButtonInRegisterMouseClicked
-        // TODO add your handling code here:
-        int x = this.getLocationOnScreen().x;
-        int y = this.getLocationOnScreen().y;
-        setXOnScreen(x);
-        setYOnScreen(y);
-        Windows.Formularios.EnterSelection Selection = new Windows.Formularios.EnterSelection();
-        Selection.setLocationRelativeToRegisterLogin(getXOnScreen(), getYOnScreen());
-        Selection.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_ReturnButtonInRegisterMouseClicked
-
-    private void Background2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Background2MouseDragged
-        // TODO add your handling code here:
-        int x = evt.getXOnScreen();
-        int y = evt.getYOnScreen();
-        this.setLocation(x-xx,y-xy);
-    }//GEN-LAST:event_Background2MouseDragged
-
-    private void Background2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Background2MousePressed
-        // TODO add your handling code here:
-        xx = evt.getX();
-        xy = evt.getY();
-    }//GEN-LAST:event_Background2MousePressed
-    
+    }    
     public void setLocationRelativeToRegisterLogin(int x, int y){
         this.setBounds(x,y,400,500);
     }
@@ -628,31 +625,33 @@ public class EnterSelection extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Background;
-    private javax.swing.JLabel Background1;
-    private javax.swing.JLabel Background2;
-    private javax.swing.JPanel ComponentsLoginPanel;
-    private javax.swing.JPanel ComponentsRegisterPanel;
-    private javax.swing.JPanel ComponentsSelectionPanel;
-    private javax.swing.JTextField EmailTextInLogin;
-    private javax.swing.JTextField EmailTextInResgister;
-    private javax.swing.JLabel ExitButton1;
-    private javax.swing.JLabel ForgotButton;
-    private javax.swing.JLabel LoginButton;
-    private javax.swing.JLabel LoginButtonInLogin;
-    private javax.swing.JPanel LoginPanel;
-    private javax.swing.JLabel Maximizar;
-    private javax.swing.JLabel Minimizar;
-    private javax.swing.JPasswordField PasswordConfrimTextInResgister;
-    private javax.swing.JPasswordField PasswordTextInRegister;
-    private javax.swing.JPasswordField PasswordTextIntLogin;
-    private javax.swing.JLabel RegisterButton;
-    private javax.swing.JLabel RegisterButtonInRegister;
-    private javax.swing.JPanel RegisterPanel;
-    private javax.swing.JLabel ReturnButtonInLogin;
-    private javax.swing.JLabel ReturnButtonInRegister;
-    private javax.swing.JPanel SelectionPanel;
-    private javax.swing.JTextField UsernameTextInRegister;
-    private javax.swing.JPanel WindowControler;
+    public javax.swing.JLabel Background;
+    public javax.swing.JLabel Background1;
+    public javax.swing.JLabel Background2;
+    public javax.swing.JPanel ComponentsLoginPanel;
+    public javax.swing.JPanel ComponentsRegisterPanel;
+    public javax.swing.JPanel ComponentsSelectionPanel;
+    public javax.swing.JTextField EmailTextInLogin;
+    public javax.swing.JTextField EmailTextInResgister;
+    public javax.swing.JLabel ExitButton1;
+    public javax.swing.JLabel ForgotButton;
+    public javax.swing.JLabel LoginButton;
+    public javax.swing.JLabel LoginButtonInLogin;
+    public javax.swing.JPanel LoginPanel;
+    public javax.swing.JLabel Maximizar;
+    public javax.swing.JLabel Minimizar;
+    public javax.swing.JPanel PanelContenedor;
+    public javax.swing.JPasswordField PasswordConfrimTextInResgister;
+    public javax.swing.JPasswordField PasswordTextInRegister;
+    public javax.swing.JPasswordField PasswordTextIntLogin;
+    public javax.swing.JLabel RegisterButton;
+    public javax.swing.JLabel RegisterButtonInRegister;
+    public javax.swing.JPanel RegisterPanel;
+    public javax.swing.JLabel ReturnButtonInLogin;
+    public javax.swing.JLabel ReturnButtonInRegister;
+    public javax.swing.JPanel SelectionPanel;
+    public javax.swing.JTextField UsernameTextInRegister;
+    public javax.swing.JPanel WindowControler;
+    public javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
