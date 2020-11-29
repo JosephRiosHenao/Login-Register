@@ -32,9 +32,9 @@ public class LoginForm extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         Maximizar = new javax.swing.JLabel();
         Minimizar = new javax.swing.JLabel();
-        Pasword1Text = new javax.swing.JPasswordField();
-        EmailText = new javax.swing.JTextField();
-        LoginButton = new javax.swing.JLabel();
+        Pasword1TextIntLogin = new javax.swing.JPasswordField();
+        EmailTextInLogin = new javax.swing.JTextField();
+        LoginButtonInLogin = new javax.swing.JLabel();
         ReturnButton = new javax.swing.JLabel();
         ExitButton = new javax.swing.JLabel();
         Background = new javax.swing.JLabel();
@@ -44,6 +44,13 @@ public class LoginForm extends javax.swing.JFrame {
         setMaximumSize(new java.awt.Dimension(400, 500));
         setMinimumSize(new java.awt.Dimension(400, 500));
         setUndecorated(true);
+        addWindowFocusListener(new java.awt.event.WindowFocusListener() {
+            public void windowGainedFocus(java.awt.event.WindowEvent evt) {
+                formWindowGainedFocus(evt);
+            }
+            public void windowLostFocus(java.awt.event.WindowEvent evt) {
+            }
+        });
 
         jPanel2.setBackground(new java.awt.Color(0, 153, 102));
         jPanel2.setOpaque(false);
@@ -79,44 +86,44 @@ public class LoginForm extends javax.swing.JFrame {
         });
         jPanel1.add(Minimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 10, 30, 30));
 
-        Pasword1Text.setBackground(new java.awt.Color(255, 255, 255));
-        Pasword1Text.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        Pasword1Text.setForeground(new java.awt.Color(20, 77, 95));
-        Pasword1Text.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        Pasword1Text.setBorder(null);
-        Pasword1Text.setCaretColor(new java.awt.Color(20, 77, 95));
-        Pasword1Text.addActionListener(new java.awt.event.ActionListener() {
+        Pasword1TextIntLogin.setBackground(new java.awt.Color(255, 255, 255));
+        Pasword1TextIntLogin.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        Pasword1TextIntLogin.setForeground(new java.awt.Color(20, 77, 95));
+        Pasword1TextIntLogin.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        Pasword1TextIntLogin.setBorder(null);
+        Pasword1TextIntLogin.setCaretColor(new java.awt.Color(20, 77, 95));
+        Pasword1TextIntLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Pasword1TextActionPerformed(evt);
+                Pasword1TextIntLoginActionPerformed(evt);
             }
         });
-        jPanel1.add(Pasword1Text, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, 280, 40));
+        jPanel1.add(Pasword1TextIntLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, 280, 40));
 
-        EmailText.setBackground(new java.awt.Color(255, 255, 255));
-        EmailText.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        EmailText.setForeground(new java.awt.Color(20, 77, 95));
-        EmailText.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        EmailText.setBorder(null);
-        EmailText.setCaretColor(new java.awt.Color(20, 77, 95));
-        EmailText.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+        EmailTextInLogin.setBackground(new java.awt.Color(255, 255, 255));
+        EmailTextInLogin.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        EmailTextInLogin.setForeground(new java.awt.Color(20, 77, 95));
+        EmailTextInLogin.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        EmailTextInLogin.setBorder(null);
+        EmailTextInLogin.setCaretColor(new java.awt.Color(20, 77, 95));
+        EmailTextInLogin.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                EmailTextPropertyChange(evt);
+                EmailTextInLoginPropertyChange(evt);
             }
         });
-        jPanel1.add(EmailText, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 280, 40));
+        jPanel1.add(EmailTextInLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 280, 40));
 
-        LoginButton.setBackground(new java.awt.Color(113, 177, 128));
-        LoginButton.setFont(new java.awt.Font("Dubai Light", 0, 24)); // NOI18N
-        LoginButton.setForeground(new java.awt.Color(255, 255, 255));
-        LoginButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LoginButton.setText("LOGIN");
-        LoginButton.setOpaque(true);
-        LoginButton.addMouseListener(new java.awt.event.MouseAdapter() {
+        LoginButtonInLogin.setBackground(new java.awt.Color(113, 177, 128));
+        LoginButtonInLogin.setFont(new java.awt.Font("Dubai Light", 0, 24)); // NOI18N
+        LoginButtonInLogin.setForeground(new java.awt.Color(255, 255, 255));
+        LoginButtonInLogin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LoginButtonInLogin.setText("LOGIN");
+        LoginButtonInLogin.setOpaque(true);
+        LoginButtonInLogin.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                LoginButtonMouseClicked(evt);
+                LoginButtonInLoginMouseClicked(evt);
             }
         });
-        jPanel1.add(LoginButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 370, 190, -1));
+        jPanel1.add(LoginButtonInLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 370, 190, -1));
 
         ReturnButton.setFont(new java.awt.Font("Dubai Light", 1, 36)); // NOI18N
         ReturnButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -196,13 +203,13 @@ public class LoginForm extends javax.swing.JFrame {
         this.XOnScreen = XOnScreen;
     }
 
-    private void Pasword1TextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pasword1TextActionPerformed
+    private void Pasword1TextIntLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pasword1TextIntLoginActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_Pasword1TextActionPerformed
+    }//GEN-LAST:event_Pasword1TextIntLoginActionPerformed
 
-    private void EmailTextPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_EmailTextPropertyChange
+    private void EmailTextInLoginPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_EmailTextInLoginPropertyChange
         // TODO add your handling code here:
-    }//GEN-LAST:event_EmailTextPropertyChange
+    }//GEN-LAST:event_EmailTextInLoginPropertyChange
     int XOnScreen, YOnScreen;
     private void ReturnButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ReturnButtonMouseClicked
         // TODO add your handling code here:
@@ -241,9 +248,10 @@ public class LoginForm extends javax.swing.JFrame {
         xy = evt.getY();
     }//GEN-LAST:event_BackgroundMousePressed
 
-    private void LoginButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginButtonMouseClicked
+    private void LoginButtonInLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginButtonInLoginMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_LoginButtonMouseClicked
+        EmailTextInLogin.setVisible(false);
+    }//GEN-LAST:event_LoginButtonInLoginMouseClicked
     private int xMinimized = 0;
     private int yMinimized = 0;
     private int StateForm = 0;
@@ -293,6 +301,11 @@ public class LoginForm extends javax.swing.JFrame {
         this.setExtendedState(1);   
     }//GEN-LAST:event_MinimizarMouseClicked
 
+    private void formWindowGainedFocus(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowGainedFocus
+        // TODO add your handling code here:
+        this.setExtendedState(getStateForm());
+    }//GEN-LAST:event_formWindowGainedFocus
+
     /**
      * @param args the command line arguments
      */
@@ -330,12 +343,12 @@ public class LoginForm extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;
-    private javax.swing.JTextField EmailText;
+    private javax.swing.JTextField EmailTextInLogin;
     private javax.swing.JLabel ExitButton;
-    private javax.swing.JLabel LoginButton;
+    private javax.swing.JLabel LoginButtonInLogin;
     private javax.swing.JLabel Maximizar;
     private javax.swing.JLabel Minimizar;
-    private javax.swing.JPasswordField Pasword1Text;
+    private javax.swing.JPasswordField Pasword1TextIntLogin;
     private javax.swing.JLabel ReturnButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
