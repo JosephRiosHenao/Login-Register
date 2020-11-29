@@ -30,13 +30,14 @@ public class LoginForm extends javax.swing.JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        ExitButton = new javax.swing.JLabel();
         Maximizar = new javax.swing.JLabel();
         Minimizar = new javax.swing.JLabel();
         Pasword1TextIntLogin = new javax.swing.JPasswordField();
         EmailTextInLogin = new javax.swing.JTextField();
         LoginButtonInLogin = new javax.swing.JLabel();
         ReturnButton = new javax.swing.JLabel();
-        ExitButton = new javax.swing.JLabel();
         Background = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -60,6 +61,18 @@ public class LoginForm extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(400, 500));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel3.setOpaque(false);
+
+        ExitButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        ExitButton.setForeground(new java.awt.Color(255, 255, 255));
+        ExitButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ExitButton.setText("X");
+        ExitButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ExitButtonMouseClicked(evt);
+            }
+        });
+
         Maximizar.setBackground(new java.awt.Color(30, 30, 30));
         Maximizar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         Maximizar.setForeground(new java.awt.Color(255, 255, 255));
@@ -71,7 +84,6 @@ public class LoginForm extends javax.swing.JFrame {
                 MaximizarMouseClicked(evt);
             }
         });
-        jPanel1.add(Maximizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 10, 30, 30));
 
         Minimizar.setBackground(new java.awt.Color(30, 30, 30));
         Minimizar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -84,7 +96,36 @@ public class LoginForm extends javax.swing.JFrame {
                 MinimizarMouseClicked(evt);
             }
         });
-        jPanel1.add(Minimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 10, 30, 30));
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(Minimizar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, 0)
+                    .addComponent(Maximizar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, 0)
+                    .addComponent(ExitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 40, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(Minimizar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Maximizar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ExitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 100, 40));
 
         Pasword1TextIntLogin.setBackground(new java.awt.Color(255, 255, 255));
         Pasword1TextIntLogin.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -135,17 +176,6 @@ public class LoginForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(ReturnButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, 30));
-
-        ExitButton.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        ExitButton.setForeground(new java.awt.Color(255, 255, 255));
-        ExitButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ExitButton.setText("X");
-        ExitButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ExitButtonMouseClicked(evt);
-            }
-        });
-        jPanel1.add(ExitButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 10, 30, 30));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/MenuSelector.png"))); // NOI18N
         Background.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -250,7 +280,6 @@ public class LoginForm extends javax.swing.JFrame {
 
     private void LoginButtonInLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginButtonInLoginMouseClicked
         // TODO add your handling code here:
-        EmailTextInLogin.setVisible(false);
     }//GEN-LAST:event_LoginButtonInLoginMouseClicked
     private int xMinimized = 0;
     private int yMinimized = 0;
@@ -353,5 +382,6 @@ public class LoginForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     // End of variables declaration//GEN-END:variables
 }
