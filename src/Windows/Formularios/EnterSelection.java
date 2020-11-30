@@ -5,6 +5,9 @@
  */
 package Windows.Formularios;
 
+import javax.swing.ImageIcon;
+
+
 /**
  *
  * @author RiosHenao
@@ -20,6 +23,7 @@ public class EnterSelection extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         LoginPanel.setVisible(false);
         RegisterPanel.setVisible(false);
+        ReturnButtonInLogin.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/Volver.png")).getImage().getScaledInstance((ReturnButtonInLogin.getWidth()-1),(ReturnButtonInLogin.getHeight()-1),java.awt.Image.SCALE_SMOOTH)));
     }
 
     /**
@@ -59,7 +63,7 @@ public class EnterSelection extends javax.swing.JFrame {
         ReturnButtonInRegister = new javax.swing.JLabel();
         RegisterButtonInRegister = new javax.swing.JLabel();
         Background2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        BackGroundResponsive = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(400, 500));
@@ -82,50 +86,76 @@ public class EnterSelection extends javax.swing.JFrame {
         WindowControler.setOpaque(false);
         WindowControler.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        ExitButton1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        ExitButton1.setBackground(new java.awt.Color(76, 137, 115));
+        ExitButton1.setFont(new java.awt.Font("Tahoma", 0, 25)); // NOI18N
         ExitButton1.setForeground(new java.awt.Color(255, 255, 255));
         ExitButton1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ExitButton1.setText("X");
+        ExitButton1.setOpaque(true);
         ExitButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ExitButton1MouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                ExitButton1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                ExitButton1MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                ExitButton1MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                ExitButton1MouseReleased(evt);
+            }
         });
-        WindowControler.add(ExitButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 30, 30));
+        WindowControler.add(ExitButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, 40, 40));
 
-        Maximizar.setBackground(new java.awt.Color(30, 30, 30));
-        Maximizar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        Maximizar.setBackground(new java.awt.Color(79, 140, 116));
+        Maximizar.setFont(new java.awt.Font("Tahoma", 0, 25)); // NOI18N
         Maximizar.setForeground(new java.awt.Color(255, 255, 255));
         Maximizar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Maximizar.setText("▭");
         Maximizar.setAlignmentY(0.0F);
+        Maximizar.setOpaque(true);
         Maximizar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 MaximizarMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                MaximizarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                MaximizarMouseExited(evt);
+            }
         });
-        WindowControler.add(Maximizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 30, 30));
+        WindowControler.add(Maximizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 40, 40));
 
-        Minimizar.setBackground(new java.awt.Color(30, 30, 30));
-        Minimizar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        Minimizar.setBackground(new java.awt.Color(82, 144, 117));
+        Minimizar.setFont(new java.awt.Font("Tahoma", 0, 25)); // NOI18N
         Minimizar.setForeground(new java.awt.Color(255, 255, 255));
         Minimizar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Minimizar.setText("—");
         Minimizar.setAlignmentY(0.0F);
+        Minimizar.setOpaque(true);
         Minimizar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 MinimizarMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                MinimizarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                MinimizarMouseExited(evt);
+            }
         });
-        WindowControler.add(Minimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, 30));
+        WindowControler.add(Minimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 40));
 
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.ipadx = 10;
-        gridBagConstraints.ipady = 10;
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(5, 290, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(0, 280, 0, 0);
         PanelContenedor.add(WindowControler, gridBagConstraints);
 
         SelectionPanel.setBackground(new java.awt.Color(0, 153, 102));
@@ -150,6 +180,12 @@ public class EnterSelection extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 LoginButtonMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                LoginButtonMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                LoginButtonMouseExited(evt);
+            }
         });
         ComponentsSelectionPanel.add(LoginButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 230, 190, -1));
 
@@ -162,6 +198,12 @@ public class EnterSelection extends javax.swing.JFrame {
         RegisterButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 RegisterButtonMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                RegisterButtonMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                RegisterButtonMouseExited(evt);
             }
         });
         ComponentsSelectionPanel.add(RegisterButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 290, 190, -1));
@@ -184,8 +226,7 @@ public class EnterSelection extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.gridheight = 3;
+        gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         PanelContenedor.add(SelectionPanel, gridBagConstraints);
 
@@ -235,16 +276,19 @@ public class EnterSelection extends javax.swing.JFrame {
         });
         ComponentsLoginPanel.add(LoginButtonInLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 370, 190, -1));
 
-        ReturnButtonInLogin.setFont(new java.awt.Font("Dubai Light", 1, 36)); // NOI18N
+        ReturnButtonInLogin.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         ReturnButtonInLogin.setForeground(new java.awt.Color(255, 255, 255));
         ReturnButtonInLogin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ReturnButtonInLogin.setText("X");
+        ReturnButtonInLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Volver.png"))); // NOI18N
+        ReturnButtonInLogin.setMaximumSize(new java.awt.Dimension(23, 31));
+        ReturnButtonInLogin.setMinimumSize(new java.awt.Dimension(23, 31));
+        ReturnButtonInLogin.setPreferredSize(new java.awt.Dimension(23, 31));
         ReturnButtonInLogin.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ReturnButtonInLoginMouseClicked(evt);
             }
         });
-        ComponentsLoginPanel.add(ReturnButtonInLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, 30));
+        ComponentsLoginPanel.add(ReturnButtonInLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 40));
 
         Background1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/MenuSelector.png"))); // NOI18N
         Background1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -264,8 +308,7 @@ public class EnterSelection extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.gridheight = 3;
+        gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         PanelContenedor.add(LoginPanel, gridBagConstraints);
 
@@ -328,16 +371,16 @@ public class EnterSelection extends javax.swing.JFrame {
         });
         ComponentsRegisterPanel.add(EmailTextInResgister, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 280, 280, 40));
 
-        ReturnButtonInRegister.setFont(new java.awt.Font("Dubai Light", 1, 36)); // NOI18N
+        ReturnButtonInRegister.setFont(new java.awt.Font("Tahoma", 0, 25)); // NOI18N
         ReturnButtonInRegister.setForeground(new java.awt.Color(255, 255, 255));
         ReturnButtonInRegister.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ReturnButtonInRegister.setText("X");
+        ReturnButtonInRegister.setText("<");
         ReturnButtonInRegister.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ReturnButtonInRegisterMouseClicked(evt);
             }
         });
-        ComponentsRegisterPanel.add(ReturnButtonInRegister, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, 30));
+        ComponentsRegisterPanel.add(ReturnButtonInRegister, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 40));
 
         RegisterButtonInRegister.setBackground(new java.awt.Color(113, 177, 128));
         RegisterButtonInRegister.setFont(new java.awt.Font("Dubai Light", 0, 24)); // NOI18N
@@ -365,16 +408,15 @@ public class EnterSelection extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.gridheight = 3;
+        gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         PanelContenedor.add(RegisterPanel, gridBagConstraints);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Gradient.png"))); // NOI18N
-        jLabel1.setMinimumSize(new java.awt.Dimension(400, 500));
-        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+        BackGroundResponsive.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Gradient.png"))); // NOI18N
+        BackGroundResponsive.setMinimumSize(new java.awt.Dimension(400, 500));
+        BackGroundResponsive.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel1MouseClicked(evt);
+                BackGroundResponsiveMouseClicked(evt);
             }
         });
 
@@ -384,13 +426,13 @@ public class EnterSelection extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(PanelContenedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE))
+                .addComponent(BackGroundResponsive, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(PanelContenedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE))
+                .addComponent(BackGroundResponsive, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE))
         );
 
         pack();
@@ -417,16 +459,6 @@ public class EnterSelection extends javax.swing.JFrame {
         RegisterPanel.setVisible(true);
         SelectionPanel.setVisible(false);
         System.out.println("Register mostrado");
-        /*int x = this.getLocationOnScreen().x;
-        int y = this.getLocationOnScreen().y;
-
-        Windows.Formularios.RegisterForm Register = new Windows.Formularios.RegisterForm();
-        setXOnScreen(x);
-        setYOnScreen(y);
-        Register.setLocationRelativeToSelector(getXOnScreen(), getYOnScreen());
-        Register.setVisible(true);
-        this.setVisible(false);*/
-
     }//GEN-LAST:event_RegisterButtonMouseClicked
 
     private void LoginButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginButtonMouseClicked
@@ -438,20 +470,19 @@ public class EnterSelection extends javax.swing.JFrame {
     }//GEN-LAST:event_LoginButtonMouseClicked
 
     private void Background2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Background2MousePressed
-        // TODO add your handling code here:
         xx = evt.getX();
         xy = evt.getY();
     }//GEN-LAST:event_Background2MousePressed
 
     private void Background2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Background2MouseDragged
-        // TODO add your handling code here:
-        int x = evt.getXOnScreen();
-        int y = evt.getYOnScreen();
-        this.setLocation(x-xx,y-xy);
+        if (this.getBounds().getWidth()<410){
+            int x = evt.getXOnScreen();
+            int y = evt.getYOnScreen();
+            this.setLocation(x-xx,y-xy);
+        }
     }//GEN-LAST:event_Background2MouseDragged
 
     private void ReturnButtonInRegisterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ReturnButtonInRegisterMouseClicked
-        // TODO add your handling code here:
         SelectionPanel.setVisible(true);
         LoginPanel.setVisible(false);
         RegisterPanel.setVisible(false);
@@ -475,15 +506,12 @@ public class EnterSelection extends javax.swing.JFrame {
     }//GEN-LAST:event_PasswordTextInRegisterActionPerformed
 
     private void Background1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Background1MousePressed
-        // TODO add your handling code here:
         xx = evt.getX();
         xy = evt.getY();
     }//GEN-LAST:event_Background1MousePressed
 
     private void Background1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Background1MouseDragged
-        // TODO add your handling code here:
-
-        if (this.getBounds().getWidth()<410){
+        if (this.getBounds().getWidth()<=400){
             int x = evt.getXOnScreen();
             int y = evt.getYOnScreen();
             this.setLocation(x-xx,y-xy);
@@ -491,7 +519,6 @@ public class EnterSelection extends javax.swing.JFrame {
     }//GEN-LAST:event_Background1MouseDragged
 
     private void ReturnButtonInLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ReturnButtonInLoginMouseClicked
-        // TODO add your handling code here:
         SelectionPanel.setVisible(true);
         LoginPanel.setVisible(false);
         RegisterPanel.setVisible(false);
@@ -516,8 +543,6 @@ public class EnterSelection extends javax.swing.JFrame {
     }//GEN-LAST:event_MinimizarMouseClicked
 
     private void MaximizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MaximizarMouseClicked
-        // TODO add your handling code here:
-
         if (this.getExtendedState() == MAXIMIZED_BOTH){
             this.setExtendedState(NORMAL);
             this.setBounds(getxMinimized(), getyMinimized(), 400, 500);
@@ -530,65 +555,90 @@ public class EnterSelection extends javax.swing.JFrame {
     }//GEN-LAST:event_MaximizarMouseClicked
 
     private void ExitButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitButton1MouseClicked
-        // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_ExitButton1MouseClicked
 
-    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+    private void BackGroundResponsiveMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackGroundResponsiveMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel1MouseClicked
+    }//GEN-LAST:event_BackGroundResponsiveMouseClicked
 
     private void formWindowGainedFocus(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowGainedFocus
-        // TODO add your handling code here:
         this.setExtendedState(getStateForm());
     }//GEN-LAST:event_formWindowGainedFocus
-    int xx,xy;    private int xOnScreen;
-    private int yOnScreen;    private int xMinimized = 0;
+
+    private void ExitButton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitButton1MouseEntered
+        ExitButton1.setBackground(new java.awt.Color(255,137,115));
+    }//GEN-LAST:event_ExitButton1MouseEntered
+
+    private void ExitButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitButton1MouseExited
+        ExitButton1.setBackground(new java.awt.Color(76,137,115));
+    }//GEN-LAST:event_ExitButton1MouseExited
+
+    private void MaximizarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MaximizarMouseEntered
+        Maximizar.setBackground(new java.awt.Color(132,193,147));
+    }//GEN-LAST:event_MaximizarMouseEntered
+
+    private void MaximizarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MaximizarMouseExited
+        Maximizar.setBackground(new java.awt.Color(79,140,116));
+    }//GEN-LAST:event_MaximizarMouseExited
+
+    private void MinimizarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MinimizarMouseEntered
+        Minimizar.setBackground(new java.awt.Color(132,193,147));
+    }//GEN-LAST:event_MinimizarMouseEntered
+
+    private void MinimizarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MinimizarMouseExited
+        Minimizar.setBackground(new java.awt.Color(82,144,117));
+    }//GEN-LAST:event_MinimizarMouseExited
+
+    private void ExitButton1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitButton1MousePressed
+        //
+    }//GEN-LAST:event_ExitButton1MousePressed
+
+    private void ExitButton1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitButton1MouseReleased
+        //
+    }//GEN-LAST:event_ExitButton1MouseReleased
+
+    private void LoginButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginButtonMouseExited
+        // TODO add your handling code here:
+        LoginButton.setBackground(new java.awt.Color(113,177,128));
+    }//GEN-LAST:event_LoginButtonMouseExited
+
+    private void RegisterButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegisterButtonMouseExited
+        // TODO add your handling code here:
+        RegisterButton.setBackground(new java.awt.Color(113,177,128));
+    }//GEN-LAST:event_RegisterButtonMouseExited
+
+    private void LoginButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginButtonMouseEntered
+        LoginButton.setBackground(new java.awt.Color(132,193,147));
+    }//GEN-LAST:event_LoginButtonMouseEntered
+
+    private void RegisterButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegisterButtonMouseEntered
+        RegisterButton.setBackground(new java.awt.Color(132,193,147));
+    }//GEN-LAST:event_RegisterButtonMouseEntered
+    int xx,xy;    
+  
+    private int xMinimized = 0;
     private int yMinimized = 0;
     private int StateForm = 0;
 
     public int getStateForm() {
         return StateForm;
     }
-
     public void setStateForm(int State) {
         this.StateForm = State;
     }
-
-
     public int getxMinimized() {
         return xMinimized;
     }
-
     public void setxMinimized(int xMinimized) {
         this.xMinimized = xMinimized;
     }
-
     public int getyMinimized() {
         return yMinimized;
     }
-
     public void setyMinimized(int yMinimized) {
         this.yMinimized = yMinimized;
     }    
-    public void setLocationRelativeToRegisterLogin(int x, int y){
-        this.setBounds(x,y,400,500);
-    }
-    public void setXOnScreen(int xOnScreen){
-        this.xOnScreen = xOnScreen;
-    } 
-    
-    public void setYOnScreen(int yOnScreen){
-        this.yOnScreen = yOnScreen;
-    }
-    
-    public int getXOnScreen(){
-        return xOnScreen;
-    }
-    
-    public int getYOnScreen(){
-        return yOnScreen;
-    }
     /**
      * @param args the command line arguments
      */
@@ -625,6 +675,7 @@ public class EnterSelection extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JLabel BackGroundResponsive;
     public javax.swing.JLabel Background;
     public javax.swing.JLabel Background1;
     public javax.swing.JLabel Background2;
@@ -652,6 +703,5 @@ public class EnterSelection extends javax.swing.JFrame {
     public javax.swing.JPanel SelectionPanel;
     public javax.swing.JTextField UsernameTextInRegister;
     public javax.swing.JPanel WindowControler;
-    public javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
