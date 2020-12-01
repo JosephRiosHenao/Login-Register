@@ -22,6 +22,11 @@ public class PrincipalFrame extends javax.swing.JFrame {
         jLabel1.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/MenuButton.png")).getImage().getScaledInstance(60, 60, java.awt.Image.SCALE_SMOOTH))); 
         jLabel3.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/HomeIcon.png")).getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH))); 
         jLabel4.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/CloudIcon.png")).getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH))); 
+        jLabel5.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/FilesIcon.png")).getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH))); 
+        jLabel6.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/DocumentIcon.png")).getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH))); 
+        jLabel7.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/ConfigIcon.png")).getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH))); 
+        jLabel8.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/InfoIcon.png")).getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH))); 
+
     }
 
     /**
