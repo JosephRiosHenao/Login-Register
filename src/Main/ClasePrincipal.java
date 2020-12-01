@@ -5,6 +5,8 @@
  */
 package Main;
 
+import java.util.Random;
+
 /**
  *
  * @author RiosHenao
@@ -12,5 +14,8 @@ package Main;
 public class ClasePrincipal {
     public static void main(String[] args) {
         Windows.Formularios.PrincipalFrame.main(args);
+        /*Random Aleatorio = new Random();
+        int Numero = Aleatorio.nextInt(10);
+        System.out.println(Numero);*/
     }
 }
