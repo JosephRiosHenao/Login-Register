@@ -19,6 +19,10 @@ public class PrincipalFrame extends javax.swing.JFrame {
      */
     public PrincipalFrame() {
         initComponents();
+        setIcons();
+    }
+    
+    public void setIcons(){
         jLabel2.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/ProfileIconDefault.png")).getImage().getScaledInstance(60, 60, java.awt.Image.SCALE_SMOOTH))); 
         jLabel1.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/MenuButton.png")).getImage().getScaledInstance(60, 60, java.awt.Image.SCALE_SMOOTH))); 
         HomeIcon.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/HomeIcon.png")).getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH))); 
@@ -50,7 +54,28 @@ public class PrincipalFrame extends javax.swing.JFrame {
         BordeSuperior = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        PanelOne = new javax.swing.JPanel();
+        PanelCentral = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jPanel7 = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jPanel8 = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -179,30 +204,154 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
         VentanaContenedora.add(BordeSuperior, java.awt.BorderLayout.PAGE_START);
 
-        PanelOne.setBackground(new java.awt.Color(255, 255, 255));
+        PanelCentral.setBackground(new java.awt.Color(255, 255, 255));
+        PanelCentral.setLayout(new java.awt.BorderLayout());
 
-        javax.swing.GroupLayout PanelOneLayout = new javax.swing.GroupLayout(PanelOne);
-        PanelOne.setLayout(PanelOneLayout);
-        PanelOneLayout.setHorizontalGroup(
-            PanelOneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jPanel1.setBackground(new java.awt.Color(77, 142, 92));
+        jPanel1.setPreferredSize(new java.awt.Dimension(350, 440));
+        jPanel1.setLayout(new java.awt.GridLayout(6, 1));
+
+        jPanel3.setLayout(new java.awt.BorderLayout());
+
+        jLabel3.setBackground(new java.awt.Color(77, 142, 92));
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("HOME");
+        jLabel3.setOpaque(true);
+        jPanel3.add(jLabel3, java.awt.BorderLayout.CENTER);
+
+        jLabel4.setBackground(new java.awt.Color(97, 157, 111));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setOpaque(true);
+        jLabel4.setPreferredSize(new java.awt.Dimension(0, 10));
+        jPanel3.add(jLabel4, java.awt.BorderLayout.PAGE_END);
+
+        jLabel15.setBackground(new java.awt.Color(97, 157, 111));
+        jLabel15.setOpaque(true);
+        jLabel15.setPreferredSize(new java.awt.Dimension(0, 10));
+        jPanel3.add(jLabel15, java.awt.BorderLayout.PAGE_START);
+
+        jPanel1.add(jPanel3);
+
+        jPanel4.setLayout(new java.awt.BorderLayout());
+
+        jLabel5.setBackground(new java.awt.Color(97, 157, 111));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setOpaque(true);
+        jLabel5.setPreferredSize(new java.awt.Dimension(0, 20));
+        jPanel4.add(jLabel5, java.awt.BorderLayout.PAGE_END);
+
+        jLabel6.setBackground(new java.awt.Color(77, 142, 92));
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("CLOUD");
+        jLabel6.setOpaque(true);
+        jPanel4.add(jLabel6, java.awt.BorderLayout.CENTER);
+
+        jPanel1.add(jPanel4);
+
+        jPanel5.setLayout(new java.awt.BorderLayout());
+
+        jLabel7.setBackground(new java.awt.Color(97, 157, 111));
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setOpaque(true);
+        jLabel7.setPreferredSize(new java.awt.Dimension(0, 20));
+        jPanel5.add(jLabel7, java.awt.BorderLayout.PAGE_END);
+
+        jLabel8.setBackground(new java.awt.Color(77, 142, 92));
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setText("FILES");
+        jLabel8.setOpaque(true);
+        jPanel5.add(jLabel8, java.awt.BorderLayout.CENTER);
+
+        jPanel1.add(jPanel5);
+
+        jPanel6.setLayout(new java.awt.BorderLayout());
+
+        jLabel9.setBackground(new java.awt.Color(97, 157, 111));
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setOpaque(true);
+        jLabel9.setPreferredSize(new java.awt.Dimension(0, 20));
+        jPanel6.add(jLabel9, java.awt.BorderLayout.PAGE_END);
+
+        jLabel10.setBackground(new java.awt.Color(77, 142, 92));
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel10.setText("DOCUMENTS");
+        jLabel10.setOpaque(true);
+        jPanel6.add(jLabel10, java.awt.BorderLayout.CENTER);
+
+        jPanel1.add(jPanel6);
+
+        jPanel7.setLayout(new java.awt.BorderLayout());
+
+        jLabel11.setBackground(new java.awt.Color(97, 157, 111));
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel11.setOpaque(true);
+        jLabel11.setPreferredSize(new java.awt.Dimension(0, 20));
+        jPanel7.add(jLabel11, java.awt.BorderLayout.PAGE_END);
+
+        jLabel12.setBackground(new java.awt.Color(77, 142, 92));
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel12.setText("SETTINGS");
+        jLabel12.setOpaque(true);
+        jPanel7.add(jLabel12, java.awt.BorderLayout.CENTER);
+
+        jPanel1.add(jPanel7);
+
+        jPanel8.setLayout(new java.awt.BorderLayout());
+
+        jLabel13.setBackground(new java.awt.Color(97, 157, 111));
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel13.setOpaque(true);
+        jLabel13.setPreferredSize(new java.awt.Dimension(0, 20));
+        jPanel8.add(jLabel13, java.awt.BorderLayout.PAGE_END);
+
+        jLabel14.setBackground(new java.awt.Color(77, 142, 92));
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel14.setText("INFO");
+        jLabel14.setOpaque(true);
+        jPanel8.add(jLabel14, java.awt.BorderLayout.CENTER);
+
+        jPanel1.add(jPanel8);
+
+        PanelCentral.add(jPanel1, java.awt.BorderLayout.WEST);
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 556, Short.MAX_VALUE)
         );
-        PanelOneLayout.setVerticalGroup(
-            PanelOneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 440, Short.MAX_VALUE)
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 764, Short.MAX_VALUE)
         );
 
-        VentanaContenedora.add(PanelOne, java.awt.BorderLayout.CENTER);
+        PanelCentral.add(jPanel2, java.awt.BorderLayout.EAST);
+
+        VentanaContenedora.add(PanelCentral, java.awt.BorderLayout.CENTER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(VentanaContenedora, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(VentanaContenedora, javax.swing.GroupLayout.DEFAULT_SIZE, 656, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(VentanaContenedora, javax.swing.GroupLayout.DEFAULT_SIZE, 540, Short.MAX_VALUE)
+            .addComponent(VentanaContenedora, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -398,9 +547,30 @@ public class PrincipalFrame extends javax.swing.JFrame {
     private javax.swing.JLabel HomeIcon;
     private javax.swing.JPanel IconsBorder;
     private javax.swing.JLabel InfoIcon;
-    private javax.swing.JPanel PanelOne;
+    private javax.swing.JPanel PanelCentral;
     private javax.swing.JPanel VentanaContenedora;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
     // End of variables declaration//GEN-END:variables
 }
