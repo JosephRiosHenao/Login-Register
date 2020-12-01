@@ -11,6 +11,6 @@ package Main;
  */
 public class ClasePrincipal {
     public static void main(String[] args) {
-        Windows.Formularios.EnterSelection.main(args);
+        Windows.Formularios.PrincipalFrame.main(args);
     }
 }
