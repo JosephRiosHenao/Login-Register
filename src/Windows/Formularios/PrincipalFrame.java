@@ -57,12 +57,15 @@ public class PrincipalFrame extends javax.swing.JFrame {
         VentanaContenedora.setLayout(new java.awt.BorderLayout());
 
         IconsBorder.setBackground(new java.awt.Color(97, 157, 111));
+        IconsBorder.setAlignmentX(0.0F);
+        IconsBorder.setAlignmentY(0.0F);
         IconsBorder.setLayout(new java.awt.GridLayout(6, 1));
 
         HomeIcon.setBackground(new java.awt.Color(97, 157, 111));
         HomeIcon.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        HomeIcon.setAlignmentY(0.0F);
         HomeIcon.setOpaque(true);
-        HomeIcon.setPreferredSize(new java.awt.Dimension(100, 100));
+        HomeIcon.setPreferredSize(new java.awt.Dimension(100, 101));
         HomeIcon.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 HomeIconMouseClicked(evt);
@@ -161,7 +164,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
         });
         IconsBorder.add(InfoIcon);
 
-        VentanaContenedora.add(IconsBorder, java.awt.BorderLayout.LINE_START);
+        VentanaContenedora.add(IconsBorder, java.awt.BorderLayout.WEST);
 
         BordeSuperior.setBackground(new java.awt.Color(113, 177, 128));
         BordeSuperior.setLayout(new java.awt.BorderLayout());
@@ -182,11 +185,11 @@ public class PrincipalFrame extends javax.swing.JFrame {
         PanelOne.setLayout(PanelOneLayout);
         PanelOneLayout.setHorizontalGroup(
             PanelOneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 536, Short.MAX_VALUE)
+            .addGap(0, 556, Short.MAX_VALUE)
         );
         PanelOneLayout.setVerticalGroup(
             PanelOneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 516, Short.MAX_VALUE)
+            .addGap(0, 440, Short.MAX_VALUE)
         );
 
         VentanaContenedora.add(PanelOne, java.awt.BorderLayout.CENTER);
@@ -199,7 +202,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(VentanaContenedora, javax.swing.GroupLayout.DEFAULT_SIZE, 616, Short.MAX_VALUE)
+            .addComponent(VentanaContenedora, javax.swing.GroupLayout.DEFAULT_SIZE, 540, Short.MAX_VALUE)
         );
 
         pack();
@@ -214,7 +217,9 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
     private void HomeIconMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomeIconMouseExited
         // TODO add your handling code here:
-        HomeIcon.setBackground(new java.awt.Color(97,157,111));
+        if (HomeIcon.getBackground()!=Color.WHITE){
+            HomeIcon.setBackground(new java.awt.Color(97,157,111));
+        }
     }//GEN-LAST:event_HomeIconMouseExited
 
     private void CloudIconMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CloudIconMouseEntered
@@ -226,70 +231,127 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
     private void CloudIconMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CloudIconMouseExited
         // TODO add your handling code here:
-        CloudIcon.setBackground(new java.awt.Color(97,157,111));
+        if (CloudIcon.getBackground()!=Color.WHITE){
+            CloudIcon.setBackground(new java.awt.Color(97,157,111));
+        }        
     }//GEN-LAST:event_CloudIconMouseExited
 
     private void FilesIconMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FilesIconMouseEntered
         // TODO add your handling code here:
+        if (FilesIcon.getBackground()!=Color.WHITE){
+            FilesIcon.setBackground(new java.awt.Color(143, 195, 155));
+        }
         
     }//GEN-LAST:event_FilesIconMouseEntered
 
     private void FilesIconMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FilesIconMouseExited
         // TODO add your handling code here:
+        if (FilesIcon.getBackground()!=Color.WHITE){
+            FilesIcon.setBackground(new java.awt.Color(97,157,111));
+        }
     }//GEN-LAST:event_FilesIconMouseExited
 
     private void DocumentIconMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DocumentIconMouseEntered
         // TODO add your handling code here:
+        if (DocumentIcon.getBackground()!=Color.WHITE){
+            DocumentIcon.setBackground(new java.awt.Color(143, 195, 155));
+        }
     }//GEN-LAST:event_DocumentIconMouseEntered
 
     private void DocumentIconMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DocumentIconMouseExited
         // TODO add your handling code here:
+        if (DocumentIcon.getBackground()!=Color.WHITE){
+            DocumentIcon.setBackground(new java.awt.Color(97,157,111));
+        }
     }//GEN-LAST:event_DocumentIconMouseExited
 
     private void ConfigIconMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ConfigIconMouseEntered
         // TODO add your handling code here:
+        if (ConfigIcon.getBackground()!=Color.WHITE){
+            ConfigIcon.setBackground(new java.awt.Color(143, 195, 155));
+        }
     }//GEN-LAST:event_ConfigIconMouseEntered
 
     private void ConfigIconMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ConfigIconMouseExited
         // TODO add your handling code here:
+        if (ConfigIcon.getBackground()!=Color.WHITE){
+            ConfigIcon.setBackground(new java.awt.Color(97,157,111));
+        }
     }//GEN-LAST:event_ConfigIconMouseExited
 
     private void InfoIconMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InfoIconMouseEntered
         // TODO add your handling code here:
+        if (InfoIcon.getBackground()!=Color.WHITE){
+            InfoIcon.setBackground(new java.awt.Color(143, 195, 155));
+        }
     }//GEN-LAST:event_InfoIconMouseEntered
 
     private void InfoIconMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InfoIconMouseExited
         // TODO add your handling code here:
+        if (InfoIcon.getBackground()!=Color.WHITE){
+            InfoIcon.setBackground(new java.awt.Color(97,157,111));
+        }
     }//GEN-LAST:event_InfoIconMouseExited
 
     private void HomeIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomeIconMouseClicked
         // TODO add your handling code here:
         HomeIcon.setBackground(Color.WHITE);
+        CloudIcon.setBackground(new java.awt.Color(97,157,111));
+        FilesIcon.setBackground(new java.awt.Color(97,157,111));
+        DocumentIcon.setBackground(new java.awt.Color(97,157,111));
+        ConfigIcon.setBackground(new java.awt.Color(97,157,111));
+        InfoIcon.setBackground(new java.awt.Color(97,157,111));
+        
     }//GEN-LAST:event_HomeIconMouseClicked
 
     private void CloudIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CloudIconMouseClicked
         // TODO add your handling code here:
         CloudIcon.setBackground(Color.WHITE);
+        HomeIcon.setBackground(new java.awt.Color(97,157,111));
+        FilesIcon.setBackground(new java.awt.Color(97,157,111));
+        DocumentIcon.setBackground(new java.awt.Color(97,157,111));
+        ConfigIcon.setBackground(new java.awt.Color(97,157,111));
+        InfoIcon.setBackground(new java.awt.Color(97,157,111));
     }//GEN-LAST:event_CloudIconMouseClicked
 
     private void FilesIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FilesIconMouseClicked
         // TODO add your handling code here:
         FilesIcon.setBackground(Color.WHITE);
+        HomeIcon.setBackground(new java.awt.Color(97,157,111));
+        CloudIcon.setBackground(new java.awt.Color(97,157,111));
+        DocumentIcon.setBackground(new java.awt.Color(97,157,111));
+        ConfigIcon.setBackground(new java.awt.Color(97,157,111));
+        InfoIcon.setBackground(new java.awt.Color(97,157,111));
     }//GEN-LAST:event_FilesIconMouseClicked
 
     private void DocumentIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DocumentIconMouseClicked
         // TODO add your handling code here:
         DocumentIcon.setBackground(Color.WHITE);
+        HomeIcon.setBackground(new java.awt.Color(97,157,111));
+        CloudIcon.setBackground(new java.awt.Color(97,157,111));
+        FilesIcon.setBackground(new java.awt.Color(97,157,111));
+        ConfigIcon.setBackground(new java.awt.Color(97,157,111));
+        InfoIcon.setBackground(new java.awt.Color(97,157,111));
     }//GEN-LAST:event_DocumentIconMouseClicked
 
     private void ConfigIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ConfigIconMouseClicked
         // TODO add your handling code here:
         ConfigIcon.setBackground(Color.WHITE);
+        HomeIcon.setBackground(new java.awt.Color(97,157,111));
+        CloudIcon.setBackground(new java.awt.Color(97,157,111));
+        FilesIcon.setBackground(new java.awt.Color(97,157,111));
+        DocumentIcon.setBackground(new java.awt.Color(97,157,111));
+        InfoIcon.setBackground(new java.awt.Color(97,157,111));
     }//GEN-LAST:event_ConfigIconMouseClicked
 
     private void InfoIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InfoIconMouseClicked
         // TODO add your handling code here:
         InfoIcon.setBackground(Color.WHITE);
+        HomeIcon.setBackground(new java.awt.Color(97,157,111));
+        CloudIcon.setBackground(new java.awt.Color(97,157,111));
+        FilesIcon.setBackground(new java.awt.Color(97,157,111));
+        DocumentIcon.setBackground(new java.awt.Color(97,157,111));
+        ConfigIcon.setBackground(new java.awt.Color(97,157,111));
     }//GEN-LAST:event_InfoIconMouseClicked
 
     /**
