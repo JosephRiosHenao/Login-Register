@@ -21,7 +21,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
         jLabel2.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/ProfileIconDefault.png")).getImage().getScaledInstance(60, 60, java.awt.Image.SCALE_SMOOTH))); 
         jLabel1.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/MenuButton.png")).getImage().getScaledInstance(60, 60, java.awt.Image.SCALE_SMOOTH))); 
         jLabel3.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/HomeIcon.png")).getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH))); 
-
+        jLabel4.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/CloudIcon.png")).getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH))); 
     }
 
     /**
@@ -58,6 +58,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
         IconsBorder.add(jLabel3);
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setMaximumSize(new java.awt.Dimension(0, 0));
         jLabel4.setPreferredSize(new java.awt.Dimension(100, 100));
         IconsBorder.add(jLabel4);
 
