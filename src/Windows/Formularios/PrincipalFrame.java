@@ -19,10 +19,31 @@ public class PrincipalFrame extends javax.swing.JFrame {
      */
     public PrincipalFrame() {
         initComponents();
-        setIcons();
+        setIconsWhite(true);
     }
     
-    private void setIcons(){
+    
+    private void setIconsWhite(boolean Init){
+        if (Init){
+            jLabel2.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/ProfileIconDefault.png")).getImage().getScaledInstance(60, 60, java.awt.Image.SCALE_SMOOTH))); 
+            jLabel1.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/Icon.png")).getImage().getScaledInstance(80, 80, java.awt.Image.SCALE_SMOOTH))); 
+            HomeIcon.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/HomeWhiteIcon.png")).getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH))); 
+            CloudIcon.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/CloudWhiteIcon.png")).getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH))); 
+            FilesIcon.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/FilesWhiteIcon.png")).getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH))); 
+            DocumentIcon.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/DocumentWhiteIcon.png")).getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH))); 
+            ConfigIcon.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/ConfigWhiteIcon.png")).getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH))); 
+            InfoIcon.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/InfoWhiteIcon.png")).getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH))); 
+        }else{
+            HomeIcon.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/HomeWhiteIcon.png")).getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH))); 
+            CloudIcon.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/CloudWhiteIcon.png")).getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH))); 
+            FilesIcon.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/FilesWhiteIcon.png")).getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH))); 
+            DocumentIcon.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/DocumentWhiteIcon.png")).getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH))); 
+            ConfigIcon.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/ConfigWhiteIcon.png")).getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH))); 
+            InfoIcon.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/InfoWhiteIcon.png")).getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH))); 
+        }
+    }
+        
+    private void setIconsGreen(){
         jLabel2.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/ProfileIconDefault.png")).getImage().getScaledInstance(60, 60, java.awt.Image.SCALE_SMOOTH))); 
         jLabel1.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/Icon.png")).getImage().getScaledInstance(80, 80, java.awt.Image.SCALE_SMOOTH))); 
         HomeIcon.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/HomeIcon.png")).getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH))); 
@@ -55,6 +76,18 @@ public class PrincipalFrame extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel9 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        jPanel12 = new javax.swing.JPanel();
+        jPanel10 = new javax.swing.JPanel();
+        jPanel11 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
         VentanaContenedora = new javax.swing.JPanel();
         IconsBorder = new javax.swing.JPanel();
         HomeIcon = new javax.swing.JLabel();
@@ -66,12 +99,14 @@ public class PrincipalFrame extends javax.swing.JFrame {
         BordeSuperior = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         PanelCentral = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jPanel10 = new javax.swing.JPanel();
-        jPanel9 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
+        FilesPanel = new javax.swing.JPanel();
+        Files_ParteSuperior = new javax.swing.JPanel();
+        Files_ArbolDeArchivos = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTree1 = new javax.swing.JTree();
+        Files_ParteInferior = new javax.swing.JPanel();
+        Files_Archivos = new javax.swing.JPanel();
 
         jPanel1.setBackground(new java.awt.Color(77, 142, 92));
         jPanel1.setPreferredSize(new java.awt.Dimension(250, 442));
@@ -151,6 +186,75 @@ public class PrincipalFrame extends javax.swing.JFrame {
         jPanel8.add(jLabel14, java.awt.BorderLayout.CENTER);
 
         jPanel1.add(jPanel8);
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setPreferredSize(new java.awt.Dimension(500, 550));
+        jPanel2.setLayout(new java.awt.BorderLayout());
+
+        jPanel9.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel9.setMinimumSize(new java.awt.Dimension(150, 200));
+        jPanel9.setPreferredSize(new java.awt.Dimension(150, 200));
+        jPanel9.setLayout(new java.awt.BorderLayout());
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(97, 157, 111));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("Welcome User");
+        jLabel4.setMaximumSize(new java.awt.Dimension(2147483647, 2147483647));
+        jLabel4.setMinimumSize(new java.awt.Dimension(250, 64));
+        jLabel4.setPreferredSize(new java.awt.Dimension(250, 64));
+        jPanel9.add(jLabel4, java.awt.BorderLayout.CENTER);
+
+        jPanel2.add(jPanel9, java.awt.BorderLayout.NORTH);
+
+        jPanel12.setLayout(new java.awt.BorderLayout());
+
+        jPanel10.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel10.setAlignmentX(0.0F);
+        jPanel10.setAlignmentY(0.0F);
+        jPanel10.setPreferredSize(new java.awt.Dimension(679, 450));
+        jPanel10.setLayout(new java.awt.BorderLayout());
+
+        jPanel11.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel11.setOpaque(false);
+        jPanel11.setPreferredSize(new java.awt.Dimension(655, 425));
+        jPanel11.setLayout(new java.awt.GridLayout(3, 4, 10, 10));
+
+        jLabel5.setBackground(new java.awt.Color(0, 153, 153));
+        jLabel5.setText("jLabel5");
+        jLabel5.setOpaque(true);
+        jPanel11.add(jLabel5);
+
+        jLabel13.setBackground(new java.awt.Color(0, 153, 153));
+        jLabel13.setText("jLabel13");
+        jLabel13.setOpaque(true);
+        jPanel11.add(jLabel13);
+
+        jLabel7.setBackground(new java.awt.Color(0, 153, 153));
+        jLabel7.setText("jLabel7");
+        jLabel7.setOpaque(true);
+        jPanel11.add(jLabel7);
+
+        jLabel15.setBackground(new java.awt.Color(0, 153, 153));
+        jLabel15.setText("jLabel15");
+        jLabel15.setOpaque(true);
+        jPanel11.add(jLabel15);
+
+        jLabel11.setBackground(new java.awt.Color(0, 153, 153));
+        jLabel11.setText("jLabel11");
+        jLabel11.setOpaque(true);
+        jPanel11.add(jLabel11);
+
+        jLabel9.setBackground(new java.awt.Color(0, 153, 153));
+        jLabel9.setText("jLabel9");
+        jLabel9.setOpaque(true);
+        jPanel11.add(jLabel9);
+
+        jPanel10.add(jPanel11, java.awt.BorderLayout.CENTER);
+
+        jPanel12.add(jPanel10, java.awt.BorderLayout.CENTER);
+
+        jPanel2.add(jPanel12, java.awt.BorderLayout.CENTER);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -277,11 +381,6 @@ public class PrincipalFrame extends javax.swing.JFrame {
         jLabel2.setPreferredSize(new java.awt.Dimension(100, 100));
         BordeSuperior.add(jLabel2, java.awt.BorderLayout.LINE_END);
 
-        jLabel5.setFont(new java.awt.Font("Segoe Script", 0, 24)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Green Butterfly");
-        BordeSuperior.add(jLabel5, java.awt.BorderLayout.CENTER);
-
         VentanaContenedora.add(BordeSuperior, java.awt.BorderLayout.PAGE_START);
 
         PanelCentral.setBackground(new java.awt.Color(255, 255, 255));
@@ -290,39 +389,53 @@ public class PrincipalFrame extends javax.swing.JFrame {
         PanelCentral.setPreferredSize(new java.awt.Dimension(850, 550));
         PanelCentral.setLayout(new java.awt.BorderLayout());
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setPreferredSize(new java.awt.Dimension(500, 550));
-        jPanel2.setLayout(new java.awt.BorderLayout());
+        FilesPanel.setOpaque(false);
+        FilesPanel.setLayout(new java.awt.BorderLayout());
 
-        jPanel10.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel10.setPreferredSize(new java.awt.Dimension(679, 450));
+        Files_ParteSuperior.setOpaque(false);
 
-        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
-        jPanel10.setLayout(jPanel10Layout);
-        jPanel10Layout.setHorizontalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+        javax.swing.GroupLayout Files_ParteSuperiorLayout = new javax.swing.GroupLayout(Files_ParteSuperior);
+        Files_ParteSuperior.setLayout(Files_ParteSuperiorLayout);
+        Files_ParteSuperiorLayout.setHorizontalGroup(
+            Files_ParteSuperiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 674, Short.MAX_VALUE)
         );
-        jPanel10Layout.setVerticalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+        Files_ParteSuperiorLayout.setVerticalGroup(
+            Files_ParteSuperiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
         );
 
-        jPanel2.add(jPanel10, java.awt.BorderLayout.SOUTH);
+        FilesPanel.add(Files_ParteSuperior, java.awt.BorderLayout.PAGE_START);
 
-        jPanel9.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel9.setPreferredSize(new java.awt.Dimension(200, 200));
-        jPanel9.setLayout(new java.awt.BorderLayout());
+        Files_ArbolDeArchivos.setOpaque(false);
+        Files_ArbolDeArchivos.setLayout(new java.awt.BorderLayout());
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(97, 157, 111));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Welcome User");
-        jPanel9.add(jLabel4, java.awt.BorderLayout.CENTER);
+        jScrollPane1.setViewportView(jTree1);
 
-        jPanel2.add(jPanel9, java.awt.BorderLayout.NORTH);
+        Files_ArbolDeArchivos.add(jScrollPane1, java.awt.BorderLayout.CENTER);
 
-        PanelCentral.add(jPanel2, java.awt.BorderLayout.CENTER);
+        FilesPanel.add(Files_ArbolDeArchivos, java.awt.BorderLayout.LINE_END);
+
+        Files_ParteInferior.setOpaque(false);
+
+        javax.swing.GroupLayout Files_ParteInferiorLayout = new javax.swing.GroupLayout(Files_ParteInferior);
+        Files_ParteInferior.setLayout(Files_ParteInferiorLayout);
+        Files_ParteInferiorLayout.setHorizontalGroup(
+            Files_ParteInferiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 674, Short.MAX_VALUE)
+        );
+        Files_ParteInferiorLayout.setVerticalGroup(
+            Files_ParteInferiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        FilesPanel.add(Files_ParteInferior, java.awt.BorderLayout.PAGE_END);
+
+        Files_Archivos.setOpaque(false);
+        Files_Archivos.setLayout(new java.awt.GridLayout(5, 5));
+        FilesPanel.add(Files_Archivos, java.awt.BorderLayout.CENTER);
+
+        PanelCentral.add(FilesPanel, java.awt.BorderLayout.CENTER);
 
         VentanaContenedora.add(PanelCentral, java.awt.BorderLayout.CENTER);
 
@@ -330,7 +443,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(VentanaContenedora, javax.swing.GroupLayout.DEFAULT_SIZE, 778, Short.MAX_VALUE)
+            .addComponent(VentanaContenedora, javax.swing.GroupLayout.DEFAULT_SIZE, 774, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -427,6 +540,8 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
     private void HomeIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomeIconMouseClicked
         // TODO add your handling code here:
+        setIconsWhite(false);
+        HomeIcon.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/HomeIcon.png")).getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH))); 
         HomeIcon.setBackground(Color.WHITE);
         CloudIcon.setBackground(new java.awt.Color(97,157,111));
         FilesIcon.setBackground(new java.awt.Color(97,157,111));
@@ -438,6 +553,8 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
     private void CloudIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CloudIconMouseClicked
         // TODO add your handling code here:
+        setIconsWhite(false);
+        CloudIcon.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/CloudIcon.png")).getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH))); 
         CloudIcon.setBackground(Color.WHITE);
         HomeIcon.setBackground(new java.awt.Color(97,157,111));
         FilesIcon.setBackground(new java.awt.Color(97,157,111));
@@ -448,6 +565,8 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
     private void FilesIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FilesIconMouseClicked
         // TODO add your handling code here:
+        setIconsWhite(false);
+        FilesIcon.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/FilesIcon.png")).getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH))); 
         FilesIcon.setBackground(Color.WHITE);
         HomeIcon.setBackground(new java.awt.Color(97,157,111));
         CloudIcon.setBackground(new java.awt.Color(97,157,111));
@@ -458,6 +577,8 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
     private void DocumentIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DocumentIconMouseClicked
         // TODO add your handling code here:
+        setIconsWhite(false);
+        DocumentIcon.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/DocumentIcon.png")).getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH))); 
         DocumentIcon.setBackground(Color.WHITE);
         HomeIcon.setBackground(new java.awt.Color(97,157,111));
         CloudIcon.setBackground(new java.awt.Color(97,157,111));
@@ -468,6 +589,8 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
     private void ConfigIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ConfigIconMouseClicked
         // TODO add your handling code here:
+        setIconsWhite(false);
+        ConfigIcon.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/ConfigIcon.png")).getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH))); 
         ConfigIcon.setBackground(Color.WHITE);
         HomeIcon.setBackground(new java.awt.Color(97,157,111));
         CloudIcon.setBackground(new java.awt.Color(97,157,111));
@@ -478,6 +601,8 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
     private void InfoIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InfoIconMouseClicked
         // TODO add your handling code here:
+        setIconsWhite(false);
+        InfoIcon.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/InfoIcon.png")).getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH))); 
         InfoIcon.setBackground(Color.WHITE);
         HomeIcon.setBackground(new java.awt.Color(97,157,111));
         CloudIcon.setBackground(new java.awt.Color(97,157,111));
@@ -527,6 +652,11 @@ public class PrincipalFrame extends javax.swing.JFrame {
     private javax.swing.JLabel ConfigIcon;
     private javax.swing.JLabel DocumentIcon;
     private javax.swing.JLabel FilesIcon;
+    private javax.swing.JPanel FilesPanel;
+    private javax.swing.JPanel Files_ArbolDeArchivos;
+    private javax.swing.JPanel Files_Archivos;
+    private javax.swing.JPanel Files_ParteInferior;
+    private javax.swing.JPanel Files_ParteSuperior;
     private javax.swing.JLabel HomeIcon;
     private javax.swing.JPanel IconsBorder;
     private javax.swing.JLabel InfoIcon;
@@ -534,16 +664,23 @@ public class PrincipalFrame extends javax.swing.JFrame {
     private javax.swing.JPanel VentanaContenedora;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -552,5 +689,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTree jTree1;
     // End of variables declaration//GEN-END:variables
 }
