@@ -102,11 +102,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
         PanelCentral = new javax.swing.JPanel();
         FilesPanel = new javax.swing.JPanel();
         Files_ParteSuperior = new javax.swing.JPanel();
-        Files_ArbolDeArchivos = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTree1 = new javax.swing.JTree();
         Files_ParteInferior = new javax.swing.JPanel();
-        Files_Archivos = new javax.swing.JPanel();
 
         jPanel1.setBackground(new java.awt.Color(77, 142, 92));
         jPanel1.setPreferredSize(new java.awt.Dimension(250, 442));
@@ -393,47 +389,36 @@ public class PrincipalFrame extends javax.swing.JFrame {
         FilesPanel.setLayout(new java.awt.BorderLayout());
 
         Files_ParteSuperior.setOpaque(false);
+        Files_ParteSuperior.setPreferredSize(new java.awt.Dimension(598, 50));
 
         javax.swing.GroupLayout Files_ParteSuperiorLayout = new javax.swing.GroupLayout(Files_ParteSuperior);
         Files_ParteSuperior.setLayout(Files_ParteSuperiorLayout);
         Files_ParteSuperiorLayout.setHorizontalGroup(
             Files_ParteSuperiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 674, Short.MAX_VALUE)
+            .addGap(0, 598, Short.MAX_VALUE)
         );
         Files_ParteSuperiorLayout.setVerticalGroup(
             Files_ParteSuperiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 50, Short.MAX_VALUE)
         );
 
         FilesPanel.add(Files_ParteSuperior, java.awt.BorderLayout.PAGE_START);
 
-        Files_ArbolDeArchivos.setOpaque(false);
-        Files_ArbolDeArchivos.setLayout(new java.awt.BorderLayout());
-
-        jScrollPane1.setViewportView(jTree1);
-
-        Files_ArbolDeArchivos.add(jScrollPane1, java.awt.BorderLayout.CENTER);
-
-        FilesPanel.add(Files_ArbolDeArchivos, java.awt.BorderLayout.LINE_END);
-
         Files_ParteInferior.setOpaque(false);
+        Files_ParteInferior.setPreferredSize(new java.awt.Dimension(674, 0));
 
         javax.swing.GroupLayout Files_ParteInferiorLayout = new javax.swing.GroupLayout(Files_ParteInferior);
         Files_ParteInferior.setLayout(Files_ParteInferiorLayout);
         Files_ParteInferiorLayout.setHorizontalGroup(
             Files_ParteInferiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 674, Short.MAX_VALUE)
+            .addGap(0, 598, Short.MAX_VALUE)
         );
         Files_ParteInferiorLayout.setVerticalGroup(
             Files_ParteInferiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         FilesPanel.add(Files_ParteInferior, java.awt.BorderLayout.PAGE_END);
-
-        Files_Archivos.setOpaque(false);
-        Files_Archivos.setLayout(new java.awt.GridLayout(5, 5));
-        FilesPanel.add(Files_Archivos, java.awt.BorderLayout.CENTER);
 
         PanelCentral.add(FilesPanel, java.awt.BorderLayout.CENTER);
 
@@ -443,11 +428,11 @@ public class PrincipalFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(VentanaContenedora, javax.swing.GroupLayout.DEFAULT_SIZE, 774, Short.MAX_VALUE)
+            .addComponent(VentanaContenedora, javax.swing.GroupLayout.DEFAULT_SIZE, 698, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(VentanaContenedora, javax.swing.GroupLayout.DEFAULT_SIZE, 768, Short.MAX_VALUE)
+            .addComponent(VentanaContenedora, javax.swing.GroupLayout.DEFAULT_SIZE, 654, Short.MAX_VALUE)
         );
 
         pack();
@@ -653,8 +638,6 @@ public class PrincipalFrame extends javax.swing.JFrame {
     private javax.swing.JLabel DocumentIcon;
     private javax.swing.JLabel FilesIcon;
     private javax.swing.JPanel FilesPanel;
-    private javax.swing.JPanel Files_ArbolDeArchivos;
-    private javax.swing.JPanel Files_Archivos;
     private javax.swing.JPanel Files_ParteInferior;
     private javax.swing.JPanel Files_ParteSuperior;
     private javax.swing.JLabel HomeIcon;
@@ -689,7 +672,5 @@ public class PrincipalFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTree jTree1;
     // End of variables declaration//GEN-END:variables
 }
