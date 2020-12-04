@@ -53,6 +53,13 @@ public class PrincipalFrame extends javax.swing.JFrame {
         ConfigIcon.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/ConfigIcon.png")).getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH))); 
         InfoIcon.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/InfoIcon.png")).getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH))); 
     }
+    
+    public void ActualizarPath(){
+        String Path  = JTreeFileExplorer.getSelectionPath().pathByAddingChild("").toString().replaceAll(","," /");
+        Path = Path.replaceAll("[","/");
+        jLabel16.setText(Path);
+
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -102,7 +109,13 @@ public class PrincipalFrame extends javax.swing.JFrame {
         PanelCentral = new javax.swing.JPanel();
         FilesPanel = new javax.swing.JPanel();
         Files_ParteSuperior = new javax.swing.JPanel();
+        jLabel16 = new javax.swing.JLabel();
         Files_ParteInferior = new javax.swing.JPanel();
+        jPanel13 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        JTreeFileExplorer = new javax.swing.JTree();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jPanel15 = new javax.swing.JPanel();
 
         jPanel1.setBackground(new java.awt.Color(77, 142, 92));
         jPanel1.setPreferredSize(new java.awt.Dimension(250, 442));
@@ -391,15 +404,21 @@ public class PrincipalFrame extends javax.swing.JFrame {
         Files_ParteSuperior.setOpaque(false);
         Files_ParteSuperior.setPreferredSize(new java.awt.Dimension(598, 50));
 
+        jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel16.setText("jLabel16");
+
         javax.swing.GroupLayout Files_ParteSuperiorLayout = new javax.swing.GroupLayout(Files_ParteSuperior);
         Files_ParteSuperior.setLayout(Files_ParteSuperiorLayout);
         Files_ParteSuperiorLayout.setHorizontalGroup(
             Files_ParteSuperiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 598, Short.MAX_VALUE)
+            .addGroup(Files_ParteSuperiorLayout.createSequentialGroup()
+                .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 213, Short.MAX_VALUE))
         );
         Files_ParteSuperiorLayout.setVerticalGroup(
             Files_ParteSuperiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
+            .addComponent(jLabel16, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
         FilesPanel.add(Files_ParteSuperior, java.awt.BorderLayout.PAGE_START);
@@ -419,6 +438,34 @@ public class PrincipalFrame extends javax.swing.JFrame {
         );
 
         FilesPanel.add(Files_ParteInferior, java.awt.BorderLayout.PAGE_END);
+
+        jPanel13.setOpaque(false);
+        jPanel13.setLayout(new java.awt.BorderLayout());
+
+        jScrollPane1.setBackground(new java.awt.Color(153, 255, 153));
+        jScrollPane1.setOpaque(false);
+
+        JTreeFileExplorer.setBackground(new java.awt.Color(255, 255, 255));
+        JTreeFileExplorer.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        JTreeFileExplorer.setForeground(new java.awt.Color(0, 102, 51));
+        JTreeFileExplorer.setAlignmentX(0.0F);
+        JTreeFileExplorer.setAlignmentY(0.0F);
+        JTreeFileExplorer.setLargeModel(true);
+        JTreeFileExplorer.setPreferredSize(new java.awt.Dimension(200, 80));
+        JTreeFileExplorer.setShowsRootHandles(false);
+        jScrollPane1.setViewportView(JTreeFileExplorer);
+
+        jPanel13.add(jScrollPane1, java.awt.BorderLayout.EAST);
+
+        jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane2.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+
+        jPanel15.setLayout(new java.awt.GridLayout(5, 6));
+        jScrollPane2.setViewportView(jPanel15);
+
+        jPanel13.add(jScrollPane2, java.awt.BorderLayout.CENTER);
+
+        FilesPanel.add(jPanel13, java.awt.BorderLayout.CENTER);
 
         PanelCentral.add(FilesPanel, java.awt.BorderLayout.CENTER);
 
@@ -525,6 +572,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
     private void HomeIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomeIconMouseClicked
         // TODO add your handling code here:
+        ActualizarPath();
         setIconsWhite(false);
         HomeIcon.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/Resources/HomeIcon.png")).getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH))); 
         HomeIcon.setBackground(Color.WHITE);
@@ -643,6 +691,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
     private javax.swing.JLabel HomeIcon;
     private javax.swing.JPanel IconsBorder;
     private javax.swing.JLabel InfoIcon;
+    private javax.swing.JTree JTreeFileExplorer;
     private javax.swing.JPanel PanelCentral;
     private javax.swing.JPanel VentanaContenedora;
     private javax.swing.JLabel jLabel1;
@@ -652,6 +701,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -664,6 +714,8 @@ public class PrincipalFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -672,5 +724,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
 }
